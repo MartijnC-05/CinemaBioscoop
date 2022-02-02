@@ -28,39 +28,6 @@
     height: 6%;
 }
 
-/*OPTIE 1: OMCIRKELD*/
-/* header ul{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header ul li{
-  list-style: none;
-  margin-left: 20px;
-}
-
-header ul li a{
-  text-decoration: none;
-  padding: 6px 15px;
-  color: black;
-  font-size: 20px;
-  border-radius: 20px;
-}
-
-header ul li a:hover,
-header ul li a.active
-{
-  background: #f86600;
-  color: white;
-} */
-
-
-
-
-
-
-/*OPTIE 2: UNDERLINE*/
 .header .menu li {
     display: inline-block;
     padding: 20px 0 20px;
