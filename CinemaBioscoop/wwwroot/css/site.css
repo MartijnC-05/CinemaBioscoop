@@ -82,11 +82,6 @@ header .menu a:hover::before, .menu a.active::before {
     transform: scale(1, 1);
 }
 
-
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
@@ -131,4 +126,16 @@ H1 {
 .page-content .films {
     width: 19.5%;
     padding: 5px;
+}
+
+footer {
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: #FEDA38;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
