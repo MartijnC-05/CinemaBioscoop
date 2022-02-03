@@ -18,8 +18,8 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        [Route("Privacy")]
-        public IActionResult Privacy()
+        [Route("Films")]
+        public IActionResult Films()
         {
             return View();
         }
