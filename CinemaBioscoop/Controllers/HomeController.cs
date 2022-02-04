@@ -24,6 +24,12 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
+        [Route("Filmagenda")]
+        public IActionResult Filmagenda()
+        {
+            return View();
+        }
+
         [Route("Test")]
         public IActionResult Test()
         {
