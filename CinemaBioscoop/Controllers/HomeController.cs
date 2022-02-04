@@ -30,6 +30,12 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
+        [Route("Bioscoop")]
+        public IActionResult Bioscoop()
+        {
+            return View();
+        }
+
         [Route("Test")]
         public IActionResult Test()
         {
