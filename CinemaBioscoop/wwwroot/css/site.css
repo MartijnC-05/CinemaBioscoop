@@ -143,3 +143,8 @@ footer {
 footer h2 {
     font-size: 18px;
 }
+
+.slide {
+    overflow: auto;
+    white-space: nowrap;
+}
