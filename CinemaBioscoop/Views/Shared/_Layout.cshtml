@@ -14,8 +14,8 @@
       <ul class="menu">
         <li><a href= "/" class="@if(ViewData["currentTab"] == "home"){<text>active</text>}">Home</a></li>
         <li><a href= "/Films" class="@if(ViewData["currentTab"] == "films"){<text>active</text>}">Films</a></li>
-        <li><a href= "/Filmagenda">Filmagenda</a></li>
-        <li><a href= "/Bioscoop">Bioscoop</a></li>
+        <li><a href= "/Filmagenda" class="@if(ViewData["currentTab"] == "filmagenda"){<text>active</text>}">Filmagenda</a></li>
+        <li><a href= "/Bioscoop" class="@if(ViewData["currentTab"] == "bioscoop"){<text>active</text>}">Bioscoop</a></li>
         <!-- <li>
           <div class="container">
 		      <input type="text" name="search" placeholder="Search..." class="input" />
