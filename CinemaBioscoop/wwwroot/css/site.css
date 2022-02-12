@@ -174,7 +174,7 @@ footer h2 {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #FEDA38;
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -232,10 +232,3 @@ footer h2 {
     width: 100%;
 }
 
-.flickity-prev-next-button.next {
-    right: -70px;
-}
-
-flickity-prev-next-button.prev {
-    left: -70px;
-}
