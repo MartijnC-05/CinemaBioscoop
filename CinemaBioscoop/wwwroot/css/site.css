@@ -124,11 +124,7 @@ H1 {
     border-radius: 20px;
 }
 
-.page-content .films {
-    width: 19.5%;
-    padding: 5px;
-}
-
+/*footer*/
 footer {
     width: 100%;
     padding: 25px 100px;
@@ -145,14 +141,7 @@ footer h2 {
     font-size: 18px;
 }
 
-.slide {
-    overflow: auto;
-    white-space: nowrap;
-}
 
-.scrollbar {
-    overflow: auto;
-}
 
 
 
@@ -166,10 +155,10 @@ footer h2 {
     display: none;
 }
 
-img {
+.slideshow-container img {
     vertical-align: middle;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 /* Slideshow container */
@@ -177,6 +166,7 @@ img {
     width: 100%;
     position: relative;
     margin: auto;
+    padding-bottom: 10px;
 }
 
 /* The dots/bullets/indicators */
@@ -224,4 +214,28 @@ img {
 
 .stippen {
     text-align: center;
+}
+
+/*films slider*/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gallery-cell {
+    width: 19%;
+    margin-right: 20px;
+    counter-increment: gallery-cell;
+}
+
+.gallery-cell img {
+    width: 100%;
+}
+
+.flickity-prev-next-button.next {
+    right: -70px;
+}
+
+flickity-prev-next-button.prev {
+    left: -70px;
 }
