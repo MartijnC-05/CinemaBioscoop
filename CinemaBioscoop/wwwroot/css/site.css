@@ -272,14 +272,14 @@ header .search-container button {
     z-index: 1000;
 }*/
 
-.allefilms .film{
+.allefilms .film {
     display: inline-block;
     float: left;
     width: 20%;
-    padding-right: 10px
+    padding-right: 20px;
 }
 
-.allefilms .films{
+.allefilms .films {
     width: 100%;
     padding-right: 10px;
     padding-bottom: 5px;
@@ -287,7 +287,8 @@ header .search-container button {
 
 .allefilms h3{
     color: white;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    font-size: 15px;
 }
 
 /*the container must be positioned relative:*/
