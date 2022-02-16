@@ -436,3 +436,38 @@ header .search-container button {
 h3{
     color: white;
 }
+
+/*bioscoop pagina*/
+.bioscooptekst{
+    width: 65%;
+    float: left;
+}
+
+.bioscoopinfo{
+    width: 30%;
+    background-color: white;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px
+
+}
+
+.bioscoopinfo h1, .bioscoopinfo h3{
+    color: black;
+}
+
+.bioscoopinfo a{
+    color: black;
+    font-size: 18.72px;
+    font-weight: bold;
+}
+
+.bioscooptekst h1 {
+    color: #f86600;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
