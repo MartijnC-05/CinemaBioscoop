@@ -470,3 +470,58 @@ h3{
     text-transform: uppercase;
     padding-bottom: 5px;
 }
+
+/*detailpagina*/
+.video{
+    margin-bottom: 30px;
+    background-color: red;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.detaillinks{
+    background-color: transparent;
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.detaillinks .poster img{
+    width: 100%
+}
+
+.detaillinks .kijkwijzer img {
+    width: 10%;
+}
+
+.detailmidden {
+    background-color: green;
+    width: 50%;
+    height: 500px;
+    float: left;
+    margin-right: 30px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.detailrechts {
+    background-color: blue;
+    width: 20%;
+    height: 500px;
+    float: left;
+    margin-bottom: 40px;
+}
+
+.categorie {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+    .categorie h3 {
+        background-color: #a7a9ac;
+        margin-bottom: 10px;
+        width: auto;
+        border-radius: 10px;
+        color: black;
+    }

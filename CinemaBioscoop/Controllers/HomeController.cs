@@ -36,8 +36,8 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        [Route("Test")]
-        public IActionResult Test()
+        [Route("Detailpagina")]
+        public IActionResult Detailpagina()
         {
             return View();
         }
