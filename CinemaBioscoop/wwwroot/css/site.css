@@ -586,3 +586,31 @@ td {
 iframe {
     width: 100%; 
 }
+
+/*bestellen*/
+.bestellinksboven {
+    background-color: red;
+    width: 20%;
+    height: 500px;
+    float: left;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.bestellinksonder {
+    background-color: green;
+    width: 20%;
+    height: 190px;
+    float: left;
+    margin-top: -190px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.bestelrechts {
+    background-color: blue;
+    width: 79%;
+    height: 700px;
+    float: left;
+    padding: 10px;
+}
