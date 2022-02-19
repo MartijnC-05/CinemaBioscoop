@@ -124,6 +124,16 @@ H1 {
     border-radius: 20px;
 }
 
+.gallery-cell h3{
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.gallery-cell a{
+    text-decoration: none;
+}
+
 /*footer*/
 footer {
     width: 100%;
