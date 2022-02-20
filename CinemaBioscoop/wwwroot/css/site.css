@@ -591,7 +591,7 @@ iframe {
 .bestellinksboven {
     background-color: red;
     width: 20%;
-    height: 500px;
+    height: 560px;
     float: left;
     padding: 10px;
     margin-right: 10px;
@@ -600,9 +600,10 @@ iframe {
 .bestellinksonder {
     background-color: green;
     width: 20%;
-    height: 190px;
+    height: 130px;
     float: left;
-    margin-top: -190px;
+    margin-top: -130px;
+    margin-left: 0px;
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -613,4 +614,56 @@ iframe {
     height: 700px;
     float: left;
     padding: 10px;
+}
+
+.bestellinksonder i {
+    color: #f86600;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.bestellinksonder #active {
+    color: white;
+}
+
+.bestelposter{
+    width: 20%;
+}
+
+.next a{
+    border-radius: 15px;
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    background-color: #FEDA38;
+    text-transform: uppercase;
+}
+
+.next{
+    margin-top: 20px;
+}
+
+.prev a{
+    text-decoration: none;
+    color: #a7a9ac;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+.prev{
+    margin-top: 10px;
+}
+
+.dtfilm {
+    padding: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 100%;
 }

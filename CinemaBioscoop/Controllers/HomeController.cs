@@ -42,8 +42,38 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        [Route("Bestellen")]
+        [Route("Bestellen1")]
         public IActionResult Bestellen1()
+        {
+            return View();
+        }
+
+        [Route("Bestellen2")]
+        public IActionResult Bestellen2()
+        {
+            return View();
+        }
+
+        [Route("Bestellen3")]
+        public IActionResult Bestellen3()
+        {
+            return View();
+        }
+
+        [Route("Bestellen4")]
+        public IActionResult Bestellen4()
+        {
+            return View();
+        }
+
+        [Route("Bestellen5")]
+        public IActionResult Bestellen5()
+        {
+            return View();
+        }
+
+        [Route("Bestellen6")]
+        public IActionResult Bestellen6()
         {
             return View();
         }
