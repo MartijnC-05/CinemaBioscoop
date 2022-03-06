@@ -1,0 +1,719 @@
+﻿@{
+    ViewData["Title"] = "Bestellen";
+    ViewData["currentTab"] = "films";
+}
+
+<body>
+    <div class="page-content">
+        <form id="regForm" action="">
+            <div class="tab">
+                <div class="bestellinksboven">
+                    <h1>No time to die</h1>
+                    <div class="bestelposter">
+                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                    </div>
+                    <div class="kijkwijzer">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                    </div>
+                    <div class="categorie">
+                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
+                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                    </div>
+                </div>
+                <div class="bestelrechts">
+                    <div class="filmagenda">
+                            <div class="dtfilm">
+                                <h3 class="title">Vandaag</h3>
+                                <div class="filmtijden">
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>10:00 - 13:00</h3>
+                                        <h3>2D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>11:30 - 14:30</h3>
+                                        <h3>2D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>13:00 - 16:00</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>14:30 - 17:30</h3>
+                                        <h3>2D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>16:00 - 19:00</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="filmagenda">
+                            <div class="dtfilm">
+                                <h3 class="title">Morgen</h3>
+                                <div class="filmtijden">
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>10:30 - 12:30</h3>
+                                        <h3>2D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>13:30 - 15:30</h3>
+                                        <h3>2D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>16:30 - 18:30</h3>
+                                        <h3>2D</h3>
+                                    </div></a>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="filmagenda">
+                            <div class="dtfilm">
+                                <h3 class="title">Overmorgen</h3>
+                                <div class="filmtijden">
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>11:00 - 14:00</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>12:30 - 15:30</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>11:00 - 14:00</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>15:00 - 18:00</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                    <a href="#">
+                                    <div class="tijdversie">
+                                        <h3>16:30 - 19:30</h3>
+                                        <h3>3D</h3>
+                                    </div></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="bestellinksonder">
+                    <div class="icons">
+                        <i class="fa-solid fa-calendar" id="active"></i>
+                        <i class="fa-solid fa-ticket"></i>
+                        <i class="fas fa-couch"></i>
+                        <i class="fa-solid fa-id-card"></i>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <div class="buttons">
+                        <div class="next">
+                            <a onclick="nextPrev(1)">Volgende stap</a>
+                        </div>
+                        <div class="prev">
+                            <a href="/detailpagina"> ⬅ Vorige stap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="bestellinksboven">
+                    <h1>No time to die</h1>
+                    <div class="bestelposter">
+                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                    </div>
+                    <div class="kijkwijzer">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                    </div>
+                    <div class="categorie" style="margin-bottom: 40px; ">
+                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
+                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                    </div>
+                    <h3 style="margin-left: 5px;">Datum film</h3>
+                    <h3 style="margin-left: 5px;">Tijd film</h3>
+                </div>
+                <div class="bestelrechts">
+                    <div class="kaartjes">
+                    <h1>Kies uw tickets:</h1>
+                        <h3 class="ticket">Normaal ticket</h3>
+                        <select id="aantal">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="3">4</option>
+                          <option value="3">5</option>
+                          <option value="3">6</option>
+                          <option value="3">7</option>
+                          <option value="3">8</option>
+                          <option value="3">9</option>
+                          <option value="3">10</option>
+                        </select>
+                    <h3 class="ticket">65+ ticket</h3>
+                    <select id="aantal">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select>
+                    <h3 class="ticket">Kinder ticket (t/m 11 jaar)</h3>
+                    <select id="aantal">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select>
+
+                    <h3 class="ticket">Familie ticket (2 ouders en 2 kinderen)</h3>
+                    <select id="aantal">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select> 
+                </div>
+    
+                <div class="kaartjes">
+                   <h1>Assecoires:</h1>
+                        <h3 class="ticket">3D bril</h3>
+                        <select id="aantal">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="3">4</option>
+                          <option value="3">5</option>
+                          <option value="3">6</option>
+                          <option value="3">7</option>
+                          <option value="3">8</option>
+                          <option value="3">9</option>
+                          <option value="3">10</option>
+                        </select>
+                    <h3 class="ticket">Kids foodbox</h3>
+                    <select id="aantal">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select>
+                    <h3 class="ticket">Popcorn + frisdrank pakket</h3>
+                    <select id="aantal">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="bestellinksonder">
+                    <div class="icons">
+                        <i class="fa-solid fa-calendar"></i>
+                        <i class="fa-solid fa-ticket" id="active"></i>
+                        <i class="fas fa-couch"></i>
+                        <i class="fa-solid fa-id-card"></i>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <div class="buttons">
+                        <div class="next">
+                            <a onclick="nextPrev(1)">Volgende stap</a>
+                        </div>
+                        <div class="prev">
+                            <a onclick="nextPrev(-1)"> ⬅ Vorige stap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="bestellinksboven">
+                    <h1>No time to die</h1>
+                    <div class="bestelposter">
+                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                    </div>
+                    <div class="kijkwijzer">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                    </div>
+                    <div class="categorie" style="margin-bottom: 40px; ">
+                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
+                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                    </div>
+                    <h3 style="margin-left: 5px;">Datum film</h3>
+                    <h3 style="margin-left: 5px;">Tijd film</h3>
+                </div>
+                <div class="bestelrechts">
+                    <h1>Kies uw zitplaats:</h1>
+                    <div class = "zitplaats">
+                        <div class="zitrij">
+                            <img src ="https://www.vuecinemas.nl/img/seating-plan-screen-blue.png" style="width:95%;">
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                        </div>
+                        <div class="zitrij">
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel" id="bezet"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                            <div class="zitstoel"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bestellinksonder">
+                    <div class="icons">
+                        <i class="fa-solid fa-calendar"></i>
+                        <i class="fa-solid fa-ticket" ></i>
+                        <i class="fas fa-couch" id="active"></i>
+                        <i class="fa-solid fa-id-card"></i>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <div class="buttons">
+                        <div class="next">
+                            <a onclick="nextPrev(1)">Volgende stap</a>
+                        </div>
+                        <div class="prev">
+                            <a onclick="nextPrev(-1)"> ⬅ Vorige stap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="bestellinksboven">
+                    <h1>No time to die</h1>
+                    <div class="bestelposter">
+                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                    </div>
+                    <div class="kijkwijzer">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                    </div>
+                    <div class="categorie"style="margin-bottom: 40px; ">
+                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
+                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                    </div>
+                    <h3 style="margin-left: 5px;">Datum film</h3>
+                    <h3 style="margin-left: 5px;">Tijd film</h3>
+                </div>
+                <div class="bestelrechts">
+                    <h1>Vul hieronder uw gegevens in:</h1>
+                    <div class="gegevens">
+                        <div class="input">
+                            <h3>Voornaam</h3> 
+                            <input type="text">
+                        </div>
+                        <div class="input">
+                            <h3>Achternaam</h3>
+                            <input type="text">
+                        </div>
+                        <div class = "input">
+                            <h3>E-mailadres</h3>
+                            <input type="text">
+                        </div>
+                        <div class="input">
+                            <h3>Herhaal E-mailadres</h3>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="login">
+                        <h1>Of log in met uw Cinema biocoop account</h1>
+                        <h3>of misschien moeten we hier maken dat je verplicht moet inloggen met je cinemabioscoop account en dat je een account kunt aanmaken</h3><br />
+                        <a href="/inloggen" class="inloggen">Inloggen</a>
+                        <a href="/createaccount" class="inloggen">Maak een account aan</a><br /><br /><br /><br />
+                    </div>
+                    <div class="voorwaarden">
+                        <input type="checkbox" id="algemenevoorwaarden" name="algemenevoorwaarden" value="akkoord"><label for="algemenevoorwaarden"> Ik ga akkoord met de <a href="/algemenevoorwaarden">algemene voorwaarden</a></label><br>
+                    </div>
+                </div>
+
+                <div class="bestellinksonder">
+                    <div class="icons">
+                        <i class="fa-solid fa-calendar"></i>
+                        <i class="fa-solid fa-ticket" ></i>
+                        <i class="fas fa-couch"></i>
+                        <i class="fa-solid fa-id-card" id="active"></i>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <div class="buttons">
+                        <div class="next">
+                            <a onclick="nextPrev(1)">Volgende stap</a>
+                        </div>
+                        <div class="prev">
+                            <a onclick="nextPrev(-1)"> ⬅ Vorige stap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="bestellinksboven">
+                    <h1>No time to die</h1>
+                    <div class="bestelposter">
+                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                    </div>
+                    <div class="kijkwijzer">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                    </div>
+                    <div class="categorie" style="margin-bottom: 40px; ">
+                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
+                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                    </div>
+                    <h3 style="margin-left: 5px;">Datum film</h3>
+                    <h3 style="margin-left: 5px;">Tijd film</h3>
+                </div>
+                <div class="bestelrechts">
+                    <div class="rekening">
+                        <h1>Afrekenen:</h1>
+                        HIER KOMT WAT JE BESTELD HEBT
+                    </div>
+                    <div class="betaalmethoden">
+                        <h1>Betaalmethode:</h1>
+
+                        <div class="betaalmethode">
+                            <a href="/Bestellen6">
+                                <img src="https://www.vuecinemas.nl/img/payment/payment-ideal.png?v=2">
+                            </a>
+                        </div>
+
+                        <div class="betaalmethode">
+                            <a href="/Bestellen6">
+                                <img src="https://www.vuecinemas.nl/img/payment/payment-digitalebioscoopbon.png?v=2">
+                            </a>
+                        </div>
+
+                        <div class="betaalmethode">
+                            <a href="/Bestellen6">
+                                <img src="https://www.vuecinemas.nl/img/payment/payment-paypal.png?v=2">
+                            </a>
+                        </div>
+
+                        <div class="betaalmethode">
+                            <a href="/Bestellen6">
+                                <img src="https://www.vuecinemas.nl/img/payment/payment-visa.png?v=2">
+                            </a>
+                        </div>
+
+                        <div class="betaalmethode">
+                            <a href="/Bestellen6">
+                                <img src="https://www.vuecinemas.nl/img/payment/payment-mastercard.png?v=2" >
+                            </a>
+                        </div>
+
+                        <div class="betaalmethode">
+                            <a href="/Bestellen6">
+                                <img src="https://www.vuecinemas.nl/img/payment/payment-maestro.png?v=2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bestellinksonder">
+                    <div class="icons">
+                        <i class="fa-solid fa-calendar"></i>
+                        <i class="fa-solid fa-ticket" ></i>
+                        <i class="fas fa-couch"></i>
+                        <i class="fa-solid fa-id-card"></i>
+                        <i class="fa-solid fa-money-check-dollar" id="active"></i>
+                    </div>
+                    <div class="buttons">
+                        <div class="next">
+                            <a onclick="nextPrev(1)">Volgende stap</a>
+                        </div>
+                        <div class="prev">
+                            <a onclick="nextPrev(-1)"> ⬅ Vorige stap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab">
+                <div class="bestellinksboven">
+                    <h1>No time to die</h1>
+                    <div class="bestelposter">
+                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                    </div>
+                    <div class="kijkwijzer">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
+                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                    </div>
+                    <div class="categorie" style="margin-bottom: 40px; ">
+                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
+                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                    </div>
+                    <h3 style="margin-left: 5px;">Datum film</h3>
+                    <h3 style="margin-left: 5px;">Tijd film</h3>
+                    </div>
+                    <div class="bestelrechts">
+                        <div class="bedankt">
+                            <h1>Bedankt voor uw bestelling!</h1><br />
+                            <h3>U zult binnen enkele minuten een mail ontvangen waarin uw tickets zich bevinden</h3>
+                            <h3>Wij wensen u alvast een fijne voorstelling!</h3><br />
+                            <img src="https://i.pinimg.com/originals/43/3d/83/433d83f7e481f35245f8c6bb7c7591d8.gif">
+                        </div>
+                    </div>
+            </div>
+
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+<script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+
+    function showTab(n) {
+      // This function will display the specified tab of the form ...
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      // ... and fix the Previous/Next buttons:
+      if (n == 0) {
+        document.getElementById("prevBtn").style.display = "none";
+      } else {
+        document.getElementById("prevBtn").style.display = "inline";
+      }
+      if (n == (x.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Submit";
+      } else {
+        document.getElementById("nextBtn").innerHTML = "Next";
+      }
+      // ... and run a function that displays the correct step indicator:
+      fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab");
+      // Exit the function if any field in the current tab is invalid:
+      if (n == 1 && !validateForm()) return false;
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // if you have reached the end of the form... :
+      if (currentTab >= x.length) {
+        //...the form gets submitted:
+        document.getElementById("regForm").submit();
+        return false;
+      }
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+
+    function validateForm() {
+      // This function deals with validation of the form fields
+      var x, y, i, valid = true;
+      x = document.getElementsByClassName("tab");
+      y = x[currentTab].getElementsByTagName("input");
+      // A loop that checks every input field in the current tab:
+      for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "") {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false:
+          valid = false;
+        }
+      }
+      // If the valid status is true, mark the step as finished and valid:
+      if (valid) {
+        document.getElementsByClassName("step")[currentTab].className += " finish";
+      }
+      return valid; // return the valid status
+    }
+
+    function fixStepIndicator(n) {
+      // This function removes the "active" class of all steps...
+      var i, x = document.getElementsByClassName("step");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active", "");
+      }
+      //... and adds the "active" class to the current step:
+      x[n].className += " active";
+    }
+</script>

@@ -84,6 +84,11 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
+        [Route("Bestellen")]
+        public IActionResult Bestellen()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -644,6 +644,7 @@ iframe {
     font-weight: 900;
     background-color: #FEDA38;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .next{
@@ -655,6 +656,7 @@ iframe {
     color: #a7a9ac;
     margin-left: 50px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .prev{
@@ -833,4 +835,18 @@ input[type=checkbox] {
 .bedankt img{
     width: 50%;
     border-radius: 20px;
+}
+
+/*bestellen*/
+input.invalid {
+    background-color: #ffdddd;
+    border: 2px solid red;
+}
+
+.tab {
+  display: none;
+}
+
+.step {
+  display: none;
 }
