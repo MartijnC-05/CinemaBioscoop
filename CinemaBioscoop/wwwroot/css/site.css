@@ -589,7 +589,7 @@ iframe {
 
 /*bestellen*/
 .bestellinksboven {
-    background-color: red;
+    background-color: transparent;
     width: 20%;
     height: 570px;
     float: left;
@@ -598,7 +598,7 @@ iframe {
 }
 
 .bestellinksonder {
-    background-color: green;
+    background-color: transparent;
     width: 20%;
     height: 130px;
     float: left;
@@ -609,7 +609,7 @@ iframe {
 }
 
 .bestelrechts {
-    background-color: blue;
+    background-color: transparent;
     width: 79%;
     height: 710px;
     float: left;
@@ -824,10 +824,10 @@ input[type=checkbox] {
     width: 100%
 }
 
-.betaalmethode{
+.betaalmethode {
     float: left;
     width: 15%;
-    background-color: grey;
+    background-color: #80808047;
     margin-right: 15px;
     border-radius: 15px;
 }

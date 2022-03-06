@@ -498,7 +498,7 @@
                         <a href="/createaccount" class="inloggen">Maak een account aan</a><br /><br /><br /><br />
                     </div>
                     <div class="voorwaarden">
-                        <input type="checkbox" id="algemenevoorwaarden" name="algemenevoorwaarden" value="akkoord"><label for="algemenevoorwaarden"> Ik ga akkoord met de <a href="/algemenevoorwaarden">algemene voorwaarden</a></label><br>
+                        <input type="checkbox" id="algemenevoorwaarden" name="algemenevoorwaarden" value="akkoord"><label for="algemenevoorwaarden" required> Ik ga akkoord met de <a href="/algemenevoorwaarden">algemene voorwaarden</a></label><br>
                     </div>
                 </div>
 
@@ -548,31 +548,31 @@
                         <h1>Betaalmethode:</h1>
 
                         <div class="betaalmethode">
-                            <a href="/Bestellen6">
+                            <a onclick="nextPrev(1)">
                                 <img src="https://www.vuecinemas.nl/img/payment/payment-ideal.png?v=2">
                             </a>
                         </div>
 
                         <div class="betaalmethode">
-                            <a href="/Bestellen6">
+                            <a onclick="nextPrev(1)">
                                 <img src="https://www.vuecinemas.nl/img/payment/payment-digitalebioscoopbon.png?v=2">
                             </a>
                         </div>
 
                         <div class="betaalmethode">
-                            <a href="/Bestellen6">
+                            <a onclick="nextPrev(1)">
                                 <img src="https://www.vuecinemas.nl/img/payment/payment-paypal.png?v=2">
                             </a>
                         </div>
 
                         <div class="betaalmethode">
-                            <a href="/Bestellen6">
+                            <a onclick="nextPrev(1)">
                                 <img src="https://www.vuecinemas.nl/img/payment/payment-visa.png?v=2">
                             </a>
                         </div>
 
                         <div class="betaalmethode">
-                            <a href="/Bestellen6">
+                            <a onclick="nextPrev(1)">
                                 <img src="https://www.vuecinemas.nl/img/payment/payment-mastercard.png?v=2" >
                             </a>
                         </div>
@@ -633,6 +633,7 @@
             </div>
 
             <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
