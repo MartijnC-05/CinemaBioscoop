@@ -591,7 +591,7 @@ iframe {
 .bestellinksboven {
     background-color: red;
     width: 20%;
-    height: 560px;
+    height: 570px;
     float: left;
     padding: 10px;
     margin-right: 10px;
@@ -611,7 +611,7 @@ iframe {
 .bestelrechts {
     background-color: blue;
     width: 79%;
-    height: 700px;
+    height: 710px;
     float: left;
     padding: 10px;
 }
@@ -668,10 +668,6 @@ iframe {
     width: 100%;
 }
 
-.tickets{
-    background-color: purple;
-}
-
 .ticket{
     background-color: white;
     color: black;
@@ -685,7 +681,7 @@ iframe {
     float: left;
 }
 
-.ticket last-child{
+.ticket:last-child{
     margin-bottom: 200px;
 }
 
@@ -752,4 +748,89 @@ footer a{
 
 #bezet:hover{
     background-color: #FF3333;
+}
+
+.gegevens input{
+    width:100%;
+    height: 50px;
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.gegevens h3{
+    padding-left: 5px;
+}
+
+.input {
+    float: left;
+    width: 40%;
+    margin-right: 50px;
+}
+
+.gegevens{
+    margin-top: 20px;
+}
+
+.login{
+    width: 100%;
+    margin-top: 300px;
+}
+
+.login a{
+    border-radius: 15px;
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    background-color: #FEDA38;
+    text-transform: uppercase;
+}
+
+.voorwaarden label, .voorwaarden a{
+    color: white;
+    font-size: 18.72px;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+.rekening{
+    background-color: red;
+    width: 100%;
+    height: 350px;
+}
+
+.betaalmethoden{
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.betaalmethoden img{
+    width: 100%
+}
+
+.betaalmethode{
+    float: left;
+    width: 15%;
+    background-color: grey;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+.bedankt img{
+    width: 50%;
+    border-radius: 20px;
 }
