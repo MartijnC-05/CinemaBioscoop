@@ -2,3 +2,13 @@
     ViewData["Title"] = "Contact";
     ViewData["currentTab"] = "Bioscoop";
 }
+
+<div class="page-content">
+    <form method="post">
+        <h3> Voornaam: <input type= "text" name= "voornaam" /> </h3>
+        <h3> Achternaam: <input type= "text" name= "achternaam" />  </h3>
+        <input type= "submit" value= "opslaan" />
+    </form> 
+
+    <p>Hallo @ViewData["voornaam"] </p> 
+</div>

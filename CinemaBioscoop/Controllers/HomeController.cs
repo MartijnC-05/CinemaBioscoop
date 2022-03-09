@@ -84,6 +84,16 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
+        [HttpPost]
+        [Route("Contact")]
+        public IActionResult Contact(string voornaam, string achternaam)
+        {
+            ViewData["voornaam"] = voornaam;
+            ViewData["achternaam"] = achternaam;
+
+            return View();
+        }
+
         [Route("Bestellen")]
         public IActionResult Bestellen()
         {
