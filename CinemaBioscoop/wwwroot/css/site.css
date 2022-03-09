@@ -296,9 +296,10 @@ header .search-container button {
     padding-bottom: 5px;
 }
 
-.allefilms h3{
+.allefilms h3 {
     color: white;
     font-size: 15px;
+    height: 20px;
 }
 
 .allefilms a{
