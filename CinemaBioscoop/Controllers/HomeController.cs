@@ -86,13 +86,17 @@ namespace CinemaBioscoop.Controllers
 
         [HttpPost]
         [Route("Contact")]
-        public IActionResult Contact(string voornaam, string achternaam)
+        public IActionResult Contact(Person person)
         {
-            ViewData["voornaam"] = voornaam;
-            ViewData["achternaam"] = achternaam;
+            if (ModelState.IsValid)
+            {
+                // todo: oplsaan in database
+                return Redirect("succes");
+            }
 
-            return View();
+            return View(person);
         }
+
 
         [Route("Bestellen")]
         public IActionResult Bestellen()

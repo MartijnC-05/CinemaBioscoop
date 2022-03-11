@@ -1,14 +1,41 @@
-﻿@{
+﻿@model Person
+@{
     ViewData["Title"] = "Contact";
     ViewData["currentTab"] = "Bioscoop";
 }
 
 <div class="page-content">
     <form method="post">
-        <h3> Voornaam: <input type= "text" name= "voornaam" /> </h3>
-        <h3> Achternaam: <input type= "text" name= "achternaam" />  </h3>
-        <input type= "submit" value= "opslaan" />
-    </form> 
+        <div>
+            @Html.LabelFor(m=>m.Voornaam)
+            @Html.TextBoxFor(m=>m.Voornaam)
+            @Html.ValidationMessageFor(m=>m.Voornaam)
+        </div>
 
-    <p>Hallo @ViewData["voornaam"] </p> 
+         <div>
+            @Html.LabelFor(m=>m.Achternaam)
+            @Html.TextBoxFor(m=>m.Achternaam)
+            @Html.ValidationMessageFor(m=>m.Achternaam)
+        </div>
+
+         <div>
+            @Html.LabelFor(m=>m.Email)
+            @Html.TextBoxFor(m=>m.Email)
+            @Html.ValidationMessageFor(m=>m.Email)
+        </div>
+
+         <div>
+            @Html.LabelFor(m=>m.Telefoon)
+            @Html.TextBoxFor(m=>m.Telefoon)
+            @Html.ValidationMessageFor(m=>m.Telefoon)
+        </div>
+
+         <div>
+            @Html.LabelFor(m=>m.Bericht)
+            @Html.TextBoxFor(m=>m.Bericht)
+            @Html.ValidationMessageFor(m=>m.Bericht)
+        </div>
+        <input type= "submit" value= "opslaan" />
+    </form>
+
 </div>
