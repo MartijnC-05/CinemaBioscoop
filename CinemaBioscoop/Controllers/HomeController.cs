@@ -91,12 +91,17 @@ namespace CinemaBioscoop.Controllers
             if (ModelState.IsValid)
             {
                 // todo: oplsaan in database
-                return Redirect("succes");
+                return Redirect("Succes");
             }
 
             return View(person);
         }
 
+        [Route("Succes")]
+        public IActionResult Succes()
+        {
+            return View();
+        }
 
         [Route("Bestellen")]
         public IActionResult Bestellen()
