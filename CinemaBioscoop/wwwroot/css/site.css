@@ -900,10 +900,15 @@ span{
         height: 40px;
         border-radius: 10px;
         font-size: 20px;
-        background-color: #f86600;
-        margin-bottom: 10px;
+        background-color: #FEDA38;
+        margin-bottom: 50px;
         font-weight: bold;
     }
+
+.form-submit input[type=submit]:hover{
+    background-color: #f86600;
+    transition-duration: .3s;
+}
 
 #form-bericht input[type=text]{
     height: 400px;
