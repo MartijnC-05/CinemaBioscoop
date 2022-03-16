@@ -6,36 +6,48 @@
 
 <div class="page-content">
     <form method="post">
-        <div>
-            @Html.LabelFor(m=>m.Voornaam)
+        <div class="form-group">
+            <div class="form-info">
+                @Html.LabelFor(m=>m.Voornaam)
+            </div>
             @Html.TextBoxFor(m=>m.Voornaam)
             @Html.ValidationMessageFor(m=>m.Voornaam)
         </div>
 
-         <div>
-            @Html.LabelFor(m=>m.Achternaam)
+         <div class="form-group">
+            <div class="form-info">
+                @Html.LabelFor(m=>m.Achternaam)
+            </div>
             @Html.TextBoxFor(m=>m.Achternaam)
             @Html.ValidationMessageFor(m=>m.Achternaam)
         </div>
 
-         <div>
-            @Html.LabelFor(m=>m.Email)
+         <div class="form-group">
+            <div class="form-info">
+                @Html.LabelFor(m=>m.Email)
+            </div>
             @Html.TextBoxFor(m=>m.Email)
             @Html.ValidationMessageFor(m=>m.Email)
         </div>
 
-         <div>
-            @Html.LabelFor(m=>m.Telefoon)
+         <div class="form-group">
+            <div class="form-info">
+                @Html.LabelFor(m=>m.Telefoon)
+            </div>
             @Html.TextBoxFor(m=>m.Telefoon)
             @Html.ValidationMessageFor(m=>m.Telefoon)
         </div>
 
-         <div>
-            @Html.LabelFor(m=>m.Bericht)
+         <div class="form-group" style="width:98.5%;" id="form-bericht">
+           <div class="form-info">
+                @Html.LabelFor(m=>m.Bericht)
+            </div>
             @Html.TextBoxFor(m=>m.Bericht)
             @Html.ValidationMessageFor(m=>m.Bericht)
         </div>
-        <input type= "submit" value= "opslaan" />
+        <div class="form-submit">
+            <input type= "submit" value= "Verzenden" />
+        </div>
     </form>
 
 </div>
