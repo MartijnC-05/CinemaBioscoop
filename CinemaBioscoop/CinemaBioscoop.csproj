@@ -17,6 +17,7 @@
     <Content Remove="Views\Home\Bestellen4.cshtml" />
     <Content Remove="Views\Home\Bestellen5.cshtml" />
     <Content Remove="Views\Home\Bestellen6.cshtml" />
+    <Content Remove="Views\Home\Privacy - Copy.cshtml" />
     <Content Remove="Views\Home\ShowAll.cshtml" />
     <Content Remove="Views\Home\Test.cshtml" />
   </ItemGroup>
