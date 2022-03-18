@@ -152,9 +152,6 @@ footer h2 {
     font-size: 18px;
 }
 
-
-
-
 /*image slidebar*/
 * {
     box-sizing: border-box;
@@ -168,6 +165,10 @@ footer h2 {
     vertical-align: middle;
     width: 100%;
     border-radius: 25px;
+}
+
+.mySlides fade{
+    width:100%;
 }
 
 /* Slideshow container */
@@ -271,15 +272,6 @@ header .search-container button {
     header .search-container button:hover {
         background: #f86600;
     }
-
-/*
-.fadeout {
-    position: sticky;
-    top: 130px;
-    background: linear-gradient(to bottom, black, transparent);
-    padding: 30px;
-    z-index: 1000;
-}*/
 
 .allefilms .film {
     display: inline-block;
@@ -898,7 +890,7 @@ span{
 }
 
     .form-submit input[type=submit] {
-        width: 100%;
+        width: 150px;
         height: 40px;
         border-radius: 10px;
         font-size: 20px;
