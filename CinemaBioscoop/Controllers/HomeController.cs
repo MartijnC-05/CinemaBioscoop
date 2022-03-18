@@ -84,6 +84,25 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
+        [HttpPost]
+        [Route("Contact")]
+        public IActionResult Contact(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                // todo: oplsaan in database
+                return Redirect("Succes");
+            }
+
+            return View(person);
+        }
+
+        [Route("Succes")]
+        public IActionResult Succes()
+        {
+            return View();
+        }
+
         [Route("Bestellen")]
         public IActionResult Bestellen()
         {
