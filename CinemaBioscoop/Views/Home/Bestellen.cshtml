@@ -26,7 +26,7 @@
                 <div class="bestelrechts">
                     <div class="filmagenda">
                             <div class="dtfilm">
-                                <h3 class="title">Vandaag</h3>
+                                <h3 class="title">Vandaag - <span id="vandaag"></span></h3>
                                 <div class="filmtijden">
                                     <a href="#">
                                     <div class="tijdversie">
@@ -59,7 +59,7 @@
 
                     <div class="filmagenda">
                             <div class="dtfilm">
-                                <h3 class="title">Morgen</h3>
+                                <h3 class="title">Morgen - <span id="morgen"></span></h3>
                                 <div class="filmtijden">
                                     <a href="#">
                                     <div class="tijdversie">
@@ -82,7 +82,7 @@
 
                     <div class="filmagenda">
                             <div class="dtfilm">
-                                <h3 class="title">Overmorgen</h3>
+                                <h3 class="title">Overmorgen - <span id="overmorgen"></span></h3>
                                 <div class="filmtijden">
                                     <a href="#">
                                     <div class="tijdversie">
@@ -304,8 +304,8 @@
                             <img src ="https://www.vuecinemas.nl/img/seating-plan-screen-blue.png" style="width:95%;">
                         </div>
                         <div class="zitrij">
-                            <div class="zitstoel"><input type="checkbox" id="1"><label for="1">1</label></div>
-                            <div class="zitstoel"><input type="checkbox" id="2"><label for="2">2</label></div>
+                            <div class="zitstoel"><input type="checkbox" id="1"></div>
+                            <div class="zitstoel"><input type="checkbox" id="2"></div>
                             <div class="zitstoel"></div>
                             <div class="zitstoel"></div>
                             <div class="zitstoel" id="bezet"></div>
@@ -718,3 +718,27 @@
       x[n].className += " active";
     }
 </script>
+
+<script type="text/javascript">
+    var today = new Date();
+    var day = today.getDay();
+    var daylist = ["Zondag","Maandag","Dinsdag","Woensdag ","Donderdag","Vrijdag","Zaterdag"];
+    var monthlist = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"]
+    var date = today.getDate();
+    var month = today.getMonth();  
+    document.getElementById("vandaag").innerHTML = daylist[day]+ " "+ date + " "+ monthlist[month];
+
+    var tomorrow = new Date(today)
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    var day = tomorrow.getDay();
+    var date = tomorrow.getDate();
+    var month = tomorrow.getMonth();  
+    document.getElementById("morgen").innerHTML = daylist[day]+ " "+ date + " "+ monthlist[month];
+
+    var overmorgen = new Date(today)
+    overmorgen.setDate(overmorgen.getDate() + 2)
+    var day = overmorgen.getDay();
+    var date = overmorgen.getDate();
+    var month = overmorgen.getMonth();  
+    document.getElementById("overmorgen").innerHTML = daylist[day]+ " "+ date + " "+ monthlist[month];
+  </script>

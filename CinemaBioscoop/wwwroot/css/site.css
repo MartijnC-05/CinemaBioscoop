@@ -907,3 +907,7 @@ span{
 #form-bericht input[type=text]{
     height: 400px;
 }
+
+.dtfilm span{
+    color:black;
+}
