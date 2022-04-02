@@ -1,10 +1,117 @@
 ﻿@{
     ViewData["Title"] = "FAQ";
 }
+<head>
+    <title>FAQ</title>
+</head>
 
 <body>
     <div class="page-content">
-        <h1>FAQ</h1>
-        <h3>Hier komen de veelgestelde vragen</h3>
+        <h1>FAQ</h1><br />
+        <section class="faq-container">
+            <div class="faq">
+                <h1 class="faq-page">Hoe kan ik mijn tickets anuleren?</h1>
+                <div class="faq-body">
+                    <h3>Tickets die gekocht zijn via de website kun je gemakkelijk en snel annuleren via jouw Cinéma bioscoop account</h3>
+                </div>
+            </div>
+            <div class="faq">
+                <h1 class="faq-page">Hoe gaat de Cinéma bioscoop om met kijkwijzer 16+ en 18+ ?</h1>
+                <div class="faq-body">
+                    <h3>De Cinéma bioscoop houdt zich strikt aan de wet op de leeftijdskeuring van 16 jaar & 18 jaar, hierop worden nooit uitzonderingen gemaakt. Bij films gekeurd voor 16 jaar en ouder & 18 jaar en ouder wordt er bij twijfel naar legitimatie gevraagd.Indien de bezoeker jonger dan de aangegeven Kijkwijzer is en/of geen legitimatie kan tonen, wordt de toegang geweigerd. Ook onder begeleiding van een ouder die wel aan de leeftijdskeuring voldoet is het niet mogelijk een voorstelling met een 16+ of 18+ keuring te bezoeken.</h3>
+                </div>
+            </div>
+            <div class="faq">
+                <h1 class="faq-page">Hoe boek ik een rolstoelplek?</h1>
+                <div class="faq-body">
+                    <h3>Alle zalen hebben rolstoel toegankelijke plaatsen. Rolstoelplaatsen zijn te boeken via de website, op de plek met het rolstoel-icoon staat géén stoel.</h3>
+                </div>
+            </div>
+            <div class="faq">
+                <h1 class="faq-page">Kan ik mijn bioscoopbon inleveren bij de Cinéma bioscoop?</h1>
+                <div class="faq-body">
+                    <h3>Antwoord</h3>
+                </div>
+            </div>
+            <div class="faq">
+                <h1 class="faq-page">Hoe bestel ik tickets?</h1>
+                <div class="faq-body">
+                    <h3>Antwoord</h3>
+                </div>
+            </div>
+            <div class="faq">
+                <h1 class="faq-page">Kan ik een eigen zaal huren?</h1>
+                <div class="faq-body">
+                    <h3>Antwoord</h3>
+                </div>
+            </div>
+            <div class="faq">
+                <h1 class="faq-page">Kan ik een specifieke film aanvragen?</h1>
+                <div class="faq-body">
+                    <h3>Antwoord</h3>
+                </div>
+            </div>
+        </section>
     </div>
+
+<script>
+var faq = document.getElementsByClassName("faq-page");
+var i;
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+    </script>
+
+
+
+
+        <!--
+        <section class="faq-container">
+            <div class="faq-one">
+                <h1 class="faq-page">Vraag 1</h1>
+                <div class="faq-body">
+                    <p>antwoord 1</p>
+                </div>
+            </div>
+
+            <div class="faq-two">
+                <h1 class="faq-page">Vraag 2</h1>
+                <div class="faq-body">
+                    <p>Antwoord 2</p>
+                </div>
+            </div>
+
+            <div class="faq-three">
+                <h1 class="faq-page">Vraag 3</h1>
+                <div class="faq-body">
+                    <p>Antwoord 3</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        var faq = document.getElementsByClassName("FAQ");
+                var i;
+                for (i = 0; i< faq.length; i++) {
+                    faq[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var body = this.nextElementSibling;
+                        if (body.style.display === "block") {
+                            body.style.display = "none";
+                        } else {
+                            body.style.display = "block";
+                        }
+                    });
+                }
+    </script> -->
 </body>

@@ -914,4 +914,52 @@ span{
     color:black;
 }
 
-/*Responsive*/
+/*FAQ*/
+.faq-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-page {
+    color: black;
+    cursor: pointer;
+    padding: 30px 20px;
+    transition: 0.4s;
+    background-color:white;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.faq-body {
+    overflow: hidden;
+    margin-top: -35px;
+    border-radius: 20px;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.faq-body h3{
+    color: black;
+    padding: 15px;
+}
+
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    font-size: 13px;
+    color: black;
+    float: right;
+    padding-top: 10px;
+
+}
+
+.faq-page .active:after {
+    content: "\2796";
+    color: black;
+}
