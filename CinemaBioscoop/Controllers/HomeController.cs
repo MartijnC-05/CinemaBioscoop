@@ -1,6 +1,8 @@
 ﻿using CinemaBioscoop.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using MySql.Data;
+using CinemaBioscoop.Database;
 
 namespace CinemaBioscoop.Controllers
 {
@@ -125,6 +127,25 @@ namespace CinemaBioscoop.Controllers
         public IActionResult Cookies()
         {
             return View();
+        }
+
+        [Route("Database")]
+        public IActionResult Database()
+        {
+            //Alle producten ophalen
+            var rows = DatabaseConnector.GetRows("select * from product");
+
+            //Lijst maken om alle namen in te stoppen
+            List<string> names = new List<string>();
+
+            foreach (var row in rows)
+            {
+                //elke naam toevoegen aan lijst
+                names.Add(row["naam"].ToString());
+            }
+
+            //de lijst met namen in html
+            return View(names);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
