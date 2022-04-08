@@ -10,7 +10,7 @@
         <ul>
             @foreach(var product in Model)
         {
-            <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid </li>
+            <li href="/product/@product.Id">@product.Naam - @product.Prijs</li>
         }
         </ul>
     </div>
