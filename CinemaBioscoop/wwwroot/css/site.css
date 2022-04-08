@@ -964,8 +964,8 @@ span{
     color: black;
 }
 
-.page-content li {
-    width: 45%;
+#product {
+    width: 30%;
     height: 50px;
     text-align: center;
     font-family: dubai;
@@ -979,5 +979,6 @@ span{
     background-color: #fada38;
     font-weight: bold;
     padding: 10px;
-   justify-content: center;
+    justify-content: center;
+    text-decoration:none;
 }
