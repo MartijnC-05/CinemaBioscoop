@@ -196,6 +196,12 @@ namespace CinemaBioscoop.Controllers
             return products;
         }
 
+        [Route("/product/{id}")]
+        public IActionResult Product()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
