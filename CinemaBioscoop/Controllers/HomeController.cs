@@ -60,6 +60,14 @@ namespace CinemaBioscoop.Controllers
             {
                 //voor elke rij maken we nu een film
                 Film f = new Film();
+                f.Trailer = row["trailer"].ToString();
+                f.Poster = row["poster"].ToString();
+                f.Kijkwijzer1 = row["kijkwijzer1"].ToString();
+                f.Kijkwijzer2 = row["kijkwijzer2"].ToString();
+                f.Kijkwijzer3 = row["kijkwijzer3"].ToString();
+                f.Kijkwijzer4 = row["kijkwijzer4"].ToString();
+                f.Categorie1 = row["categorie1"].ToString();
+                f.Categorie2 = row["categorie2"].ToString();
                 f.Naam = row["naam"].ToString();
                 f.Omschrijving = row["beschrijving"].ToString();
                 f.Regisseur = row["regisseur"].ToString();

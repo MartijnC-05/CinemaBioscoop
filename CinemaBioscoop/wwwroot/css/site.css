@@ -535,13 +535,16 @@ p{
     width: auto;
     border-radius: 10px;
     color: black;
+    float:left;
+    padding-left: 5px;
+    padding-right:5px;
+    margin-left: 5px;
 }
 
 .detailrechts a {
     border-radius: 15px;
     width: 200px;
     height: 20px;
-    margin: 10px;
     padding: 10px;
     padding-left: 35px;
     padding-right: 35px;

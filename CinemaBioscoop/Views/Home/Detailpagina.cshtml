@@ -7,25 +7,24 @@
 @foreach(var film in Model)
 {
 
-
 <body>
 <div class="page-content">
     <div class="video">
-        <iframe width="1320" height="700" src="https://www.youtube.com/embed/vw2FOYjCz38?&autoplay=0&controls=0&mute=0&showinfo=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1320" height="700" src="@film.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="detaillinks">
         <div class="poster">
-            <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg">
+            <img src="@film.Poster">
         </div>
         <div class="kijkwijzer">
-            <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-            <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-            <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-            <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+            <img src="@film.Kijkwijzer1" style="margin-left: 5px;">
+            <img src="@film.Kijkwijzer2">
+            <img src="@film.Kijkwijzer3">
+            <img src="@film.Kijkwijzer4">
         </div>
         <div class="categorie">
-            <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-            <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+            <h3>@film.Categorie1</h3>
+            <h3>@film.Categorie2</h3>
         </div>
     </div>
     <div class="detailmidden">
@@ -67,5 +66,4 @@
     </div>
 </div>
 </body>
-
 }
