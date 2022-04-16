@@ -41,7 +41,40 @@ namespace CinemaBioscoop.Controllers
         [Route("Detailpagina")]
         public IActionResult Detailpagina()
         {
-            return View();
+            //lijst met films ophalen
+            var films = GetAllFilms();
+
+            //Lijst met films in de html stoppen
+            return View(films);
+        }
+
+        public List<Film> GetAllFilms()
+        {
+            // alle films ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from film");
+
+            //lijst maken om alle films in te stoppen
+            List<Film> films = new List<Film>();
+
+            foreach (var row in rows)
+            {
+                //voor elke rij maken we nu een film
+                Film f = new Film();
+                f.Naam = row["naam"].ToString();
+                f.Omschrijving = row["beschrijving"].ToString();
+                f.Regisseur = row["regisseur"].ToString();
+                f.Cast = row["cast"].ToString();
+                f.Release = row["release"].ToString();
+                f.Speelduur = row["speelduur"].ToString();
+                f.Taal = row["taal"].ToString();
+                f.Ondertiteling = row["ondertiteling"].ToString();
+                //f.Id = Convert.ToInt32(row["id"]);
+
+                //en die film voegen we toe aan de lijst met producten
+                films.Add(f);
+            }
+
+            return films;
         }
 
         [Route("Bestellen1")]

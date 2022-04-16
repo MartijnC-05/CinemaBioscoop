@@ -1,7 +1,12 @@
-﻿@{
+﻿@using CinemaBioscoop.Database
+@model List<Film>
+@{
     ViewData["Title"] = "Detail pagina";
     ViewData["currentTab"] = "films";
 }
+@foreach(var film in Model)
+{
+
 
 <body>
 <div class="page-content">
@@ -24,17 +29,17 @@
         </div>
     </div>
     <div class="detailmidden">
-        <h1>No time to die</h1><br>
-        <h3>In de 25e James Bond-film No Time to Die heeft James Bond zijn turbulente leven als geheim agent achter zich gelaten en leidt hij een rustig bestaan op Jamaica. Dit wordt abrupt onderbroken wanneer zijn oude vriend en CIA agent Felix Leiter hem vraagt om een ontvoerde wetenschapper te helpen bevrijden. Deze missie blijkt verraderlijker dan gedacht en brengt Bond op het spoor van een mysterieuze schurk die gewapend is met levensgevaarlijke nieuwe technologie. In No Time to Die keert Daniel Craig terug voor zijn vijfde film als Ian Flemings James Bond 007.</h3><br>
+        <h1>@film.Naam</h1><br>
+        <h3>@film.Omschrijving</h3><br>
     
         <table>
             <tr>
                 <th>Regisseur</th>
-                <td>Cary Joji Fukunaga</td>
+                <td>@film.Regisseur</td>
             </tr>
             <tr>
                 <th>Cast</th>
-                <td>David Dencik, Dali Benssalah, Jeffrey Wright, Ralph Fiennes, Daniel Craig, Rami Malek, Léa Seydoux, Lashana Lynch, Ben Whishaw, Naomie Harris, Billy Magnussen, Ana de Armas, Rory Kinnear</td>
+                <td>@film.Cast</td>
             </tr>
         </table>
 
@@ -44,21 +49,23 @@
         <table>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Release</th>
-                <td style="font-size: 13px;">30 september 2021</td>
+                <td style="font-size: 13px;">@film.Release</td>
             </tr>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Speelduur</th>
-                <td style="font-size: 13px;">163 minuten</td>
+                <td style="font-size: 13px;">@film.Speelduur</td>
             </tr>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Gesproken taal</th>
-                <td style="font-size: 13px;">Engels</td>
+                <td style="font-size: 13px;">@film.Taal</td>
             </tr>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Ondertiteling</th>
-                <td style="font-size: 13px;">Ja</td>
+                <td style="font-size: 13px;">@film.Ondertiteling</td>
             </tr>
         </table>
     </div>
 </div>
 </body>
+
+}
