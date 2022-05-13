@@ -205,9 +205,35 @@ namespace CinemaBioscoop.Controllers
         }
 
         [Route("/product/{id}")]
-        public IActionResult Product()
+        public IActionResult ProductDetails(int id)
         {
-            return View();
+            var product = GetProduct(id);
+
+            return View(product);
+        }
+
+        public Product GetProduct(int id)
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows($"select * from product where id = {id}");
+
+            //lijst maken om alle producten in te stoppen
+            List<Product> products = new List<Product>();
+
+            foreach (var row in rows)
+            {
+                //voor elke rij maken we nu een product
+                Product p = new Product();
+                p.Naam = row["naam"].ToString();
+                p.Prijs = row["prijs"].ToString();
+                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Id = Convert.ToInt32(row["id"]);
+
+                //en dat product voegen we toe aan de lijst met producten
+                products.Add(p);
+            }
+
+            return products[0];
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
