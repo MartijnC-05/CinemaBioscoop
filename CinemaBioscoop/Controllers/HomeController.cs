@@ -191,11 +191,7 @@ namespace CinemaBioscoop.Controllers
             foreach (var row in rows)
             {
                 //voor elke rij maken we nu een product
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Id = Convert.ToInt32(row["id"]);
+                Product p = GetProductFromRow(row);
 
                 //en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
@@ -212,29 +208,29 @@ namespace CinemaBioscoop.Controllers
             return View(product);
         }
 
+        private Product GetProductFromRow(Dictionary<string,object> row)
+        {
+            Product p = new Product(); ;
+            p.Naam = row["naam"].ToString();
+            p.Prijs = row["prijs"].ToString();
+            p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+            p.Id = Convert.ToInt32(row["id"]);
+
+            return p;
+        }
+
         public Product GetProduct(int id)
         {
-            // alle producten ophalen uit de database
+            //product ophalen uit de database op basis van het id
             var rows = DatabaseConnector.GetRows($"select * from product where id = {id}");
 
-            //lijst maken om alle producten in te stoppen
-            List<Product> products = new List<Product>();
+            //we krijgen altijd een lijst terug maar er zou altijd één product in moeten zitten dus we pakken voor het gemak gewoon de eerste
+            Product product = GetProductFromRow(rows[0]);
 
-            foreach (var row in rows)
-            {
-                //voor elke rij maken we nu een product
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Id = Convert.ToInt32(row["id"]);
-
-                //en dat product voegen we toe aan de lijst met producten
-                products.Add(p);
-            }
-
-            return products[0];
+            //als laatste sturen we het product uit de lijst terug
+            return product;
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
