@@ -1,11 +1,10 @@
-﻿@using ReadDatabase.Database
+﻿@using CinemaBioscoop.Database
 @model Product
 @{
     ViewData["Title"] = Model.Naam;
 }
-
-<h1>Hallo met de detail pagina!</h1>
 <div class = "page-content">
+    <h1>Hallo met de detail pagina!</h1><br />
     <h1>@Model.Naam</h1>
-    <p>@Model.Prijs</p>
+    <h3>@Model.Prijs</h3>
 </div>
