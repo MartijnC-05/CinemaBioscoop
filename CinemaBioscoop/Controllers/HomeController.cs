@@ -222,7 +222,7 @@ namespace CinemaBioscoop.Controllers
             f.Naam = row["naam"].ToString();
             f.Omschrijving = row["beschrijving"].ToString();
             f.Regisseur = row["regisseur"].ToString();
-            //f.Cast = row["cast"].ToString();
+            f.Cast = row["cast"].ToString();
             f.Release = row["release"].ToString();
             f.Speelduur = row["speelduur"].ToString();
             f.Taal = row["taal"].ToString();
