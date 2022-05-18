@@ -217,8 +217,8 @@ namespace CinemaBioscoop.Controllers
             f.Kijkwijzer2 = row["kijkwijzer_2"].ToString();
             f.Kijkwijzer3 = row["kijkwijzer_3"].ToString();
             f.Kijkwijzer4 = row["kijkwijzer_4"].ToString();
-            f.Categorie1 = row["categorie1"].ToString();
-            f.Categorie2 = row["categorie2"].ToString();
+            f.Categorie1 = row["filmcategorie_1"].ToString();
+            f.Categorie2 = row["filmcategorie_2"].ToString();
             f.Naam = row["naam"].ToString();
             f.Omschrijving = row["beschrijving"].ToString();
             f.Regisseur = row["regisseur"].ToString();

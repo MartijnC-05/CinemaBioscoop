@@ -1,9 +1,74 @@
 ﻿@using CinemaBioscoop.Database
-@model Film
+@model List<Film>
+
 @{
     ViewData["Title"] = Model.Naam;
 }
-<div class = "page-content">
+@*<div class = "page-content">
     <h1>@Model.Naam</h1>
     <img src="@Model.Poster">
+</div>*@
+
+@foreach(var film in Model)
+{
+
+<body>
+<div class="page-content">
+    <div class="video">
+        <iframe width="1320" height="700" src="@film.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="detaillinks">
+        <div class="poster">
+            <img src="@film.Poster">
+        </div>
+        <div class="kijkwijzer">
+            <img src="@film.Kijkwijzer1" style="margin-left: 5px;">
+            <img src="@film.Kijkwijzer2">
+            <img src="@film.Kijkwijzer3">
+            <img src="@film.Kijkwijzer4">
+        </div>
+        <div class="categorie">
+            <h3>@film.Categorie1</h3>
+            <h3>@film.Categorie2</h3>
+        </div>
+    </div>
+    <div class="detailmidden">
+        <h1>@film.Naam</h1><br>
+        <h3>@film.Omschrijving</h3><br>
+    
+        <table>
+            <tr>
+                <th>Regisseur</th>
+                <td>@film.Regisseur</td>
+            </tr>
+            <tr>
+                <th>Cast</th>
+                <td>@film.Cast</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="detailrechts">        
+        <a href="/bestellen" class="bestellen">Tickets bestellen</a> <br><br>
+        <table>
+            <tr>
+                <th style="font-size: 16px; width: 300px;">Release</th>
+                <td style="font-size: 13px;">@film.Release</td>
+            </tr>
+            <tr>
+                <th style="font-size: 16px; width: 300px;">Speelduur</th>
+                <td style="font-size: 13px;">@film.Speelduur</td>
+            </tr>
+            <tr>
+                <th style="font-size: 16px; width: 300px;">Gesproken taal</th>
+                <td style="font-size: 13px;">@film.Taal</td>
+            </tr>
+            <tr>
+                <th style="font-size: 16px; width: 300px;">Ondertiteling</th>
+                <td style="font-size: 13px;">@film.Ondertiteling</td>
+            </tr>
+        </table>
+    </div>
 </div>
+</body>
+}
