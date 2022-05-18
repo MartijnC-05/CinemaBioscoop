@@ -38,52 +38,52 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        [Route("Detailpagina")]
-        public IActionResult Detailpagina()
-        {
-            //lijst met films ophalen
-            var films = GetAllFilms();
+        //[Route("Detailpagina")]
+        //public IActionResult Detailpagina()
+        //{
+        //    lijst met films ophalen
+        //    var films = GetAllFilms();
 
-            //Lijst met films in de html stoppen
-            return View(films);
-        }
+        //    Lijst met films in de html stoppen
+        //    return View(films);
+        //}
 
-        public List<Film> GetAllFilms()
-        {
-            // alle films ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from film");
+        //public List<Film> GetAllFilms()
+        //{
+        //    alle films ophalen uit de database
+        //    var rows = DatabaseConnector.GetRows("select * from film");
 
-            //lijst maken om alle films in te stoppen
-            List<Film> films = new List<Film>();
+        //    lijst maken om alle films in te stoppen
+        //    List<Film> films = new List<Film>();
 
-            foreach (var row in rows)
-            {
-                //voor elke rij maken we nu een film
-                Film f = new Film();
-                f.Trailer = row["trailer"].ToString();
-                f.Poster = row["poster"].ToString();
-                f.Kijkwijzer1 = row["kijkwijzer1"].ToString();
-                f.Kijkwijzer2 = row["kijkwijzer2"].ToString();
-                f.Kijkwijzer3 = row["kijkwijzer3"].ToString();
-                f.Kijkwijzer4 = row["kijkwijzer4"].ToString();
-                f.Categorie1 = row["categorie1"].ToString();
-                f.Categorie2 = row["categorie2"].ToString();
-                f.Naam = row["naam"].ToString();
-                f.Omschrijving = row["beschrijving"].ToString();
-                f.Regisseur = row["regisseur"].ToString();
-                f.Cast = row["cast"].ToString();
-                f.Release = row["release"].ToString();
-                f.Speelduur = row["speelduur"].ToString();
-                f.Taal = row["taal"].ToString();
-                f.Ondertiteling = row["ondertiteling"].ToString();
-                //f.Id = Convert.ToInt32(row["id"]);
+        //    foreach (var row in rows)
+        //    {
+        //        voor elke rij maken we nu een film
+        //        Film f = new Film();
+        //        f.Trailer = row["trailer"].ToString();
+        //        f.Poster = row["poster"].ToString();
+        //        f.Kijkwijzer1 = row["kijkwijzer_1"].ToString();
+        //        f.Kijkwijzer2 = row["kijkwijzer_2"].ToString();
+        //        f.Kijkwijzer3 = row["kijkwijzer_3"].ToString();
+        //        f.Kijkwijzer4 = row["kijkwijzer_4"].ToString();
+        //        f.Categorie1 = row["categorie1"].ToString();
+        //        f.Categorie2 = row["categorie2"].ToString();
+        //        f.Naam = row["naam"].ToString();
+        //        f.Omschrijving = row["beschrijving"].ToString();
+        //        f.Regisseur = row["regisseur"].ToString();
+        //        f.Cast = row["cast"].ToString();
+        //        f.Release = row["release"].ToString();
+        //        f.Speelduur = row["speelduur"].ToString();
+        //        f.Taal = row["taal"].ToString();
+        //        f.Ondertiteling = row["ondertiteling"].ToString();
+        //        f.Id = Convert.ToInt32(row["id"]);
 
-                //en die film voegen we toe aan de lijst met producten
-                films.Add(f);
-            }
+        //        en die film voegen we toe aan de lijst met producten
+        //        //films.Add(f);
+        //    }
 
-            return films;
-        }
+        //    return films;
+        //}
 
         [Route("Bestellen1")]
         public IActionResult Bestellen1()
@@ -174,61 +174,74 @@ namespace CinemaBioscoop.Controllers
         public IActionResult Database()
         {
             //lijst met producten ophalen
-            var products = GetAllProducts();
+            var films = GetAllFilms();
 
             //Lijst met producten in de html stoppen
-            return View(products);
+            return View(films);
         }
 
-        public List<Product> GetAllProducts()
+        public List<Film> GetAllFilms()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var rows = DatabaseConnector.GetRows("select * from film");
 
             //lijst maken om alle producten in te stoppen
-            List<Product> products = new List<Product>();
+            List<Film> films = new List<Film>();
 
             foreach (var row in rows)
             {
                 //voor elke rij maken we nu een product
-                Product p = GetProductFromRow(row);
+                Film f = GetFilmFromRow(row);
 
                 //en dat product voegen we toe aan de lijst met producten
-                products.Add(p);
+                films.Add(f);
             }
 
-            return products;
+            return films;
         }
 
-        [Route("/product/{id}")]
-        public IActionResult ProductDetails(int id)
+        [Route("/film/{id}")]
+        public IActionResult FilmDetails(int id)
         {
-            var product = GetProduct(id);
+            var film = GetFilm(id);
 
-            return View(product);
+            return View(film);
         }
 
-        private Product GetProductFromRow(Dictionary<string,object> row)
+        private Film GetFilmFromRow(Dictionary<string,object> row)
         {
-            Product p = new Product(); ;
-            p.Naam = row["naam"].ToString();
-            p.Prijs = row["prijs"].ToString();
-            p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-            p.Id = Convert.ToInt32(row["id"]);
+            Film f = new Film(); ;
+            f.Trailer = row["trailer"].ToString();
+            f.Poster = row["poster"].ToString();
+            f.Kijkwijzer1 = row["kijkwijzer_1"].ToString();
+            f.Kijkwijzer2 = row["kijkwijzer_2"].ToString();
+            f.Kijkwijzer3 = row["kijkwijzer_3"].ToString();
+            f.Kijkwijzer4 = row["kijkwijzer_4"].ToString();
+            f.Categorie1 = row["categorie1"].ToString();
+            f.Categorie2 = row["categorie2"].ToString();
+            f.Naam = row["naam"].ToString();
+            f.Omschrijving = row["beschrijving"].ToString();
+            f.Regisseur = row["regisseur"].ToString();
+            //f.Cast = row["cast"].ToString();
+            f.Release = row["release"].ToString();
+            f.Speelduur = row["speelduur"].ToString();
+            f.Taal = row["taal"].ToString();
+            f.Ondertiteling = row["ondertiteling"].ToString();
+            f.Id = Convert.ToInt32(row["id"]);
 
-            return p;
+            return f;
         }
 
-        public Product GetProduct(int id)
+        public Film GetFilm(int id)
         {
             //product ophalen uit de database op basis van het id
-            var rows = DatabaseConnector.GetRows($"select * from product where id = {id}");
+            var rows = DatabaseConnector.GetRows($"select * from film where id = {id}");
 
             //we krijgen altijd een lijst terug maar er zou altijd één product in moeten zitten dus we pakken voor het gemak gewoon de eerste
-            Product product = GetProductFromRow(rows[0]);
+            Film film = GetFilmFromRow(rows[0]);
 
             //als laatste sturen we het product uit de lijst terug
-            return product;
+            return film;
         }
 
 

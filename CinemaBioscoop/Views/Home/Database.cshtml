@@ -1,10 +1,10 @@
 ﻿@using CinemaBioscoop.Database
-@model List<Product>
+@model List<Film>
 @{
     ViewData["Title"] = "Database";
 }
 
-<body>
+@*<body>
     <div class="page-content">
         <h1 class="display-4">Welcome!</h1>
         <ul>
@@ -14,4 +14,179 @@
         }
         </ul>
     </div>
+</body>*@
+
+<body>
+<div class="page-content">
+<H1>Nu in de bioscoop</H1> <br>
+
+<div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Genre:</option>
+    <option value="1">Actie</option>
+    <option value="2">Animatie</option>
+    <option value="3">Avontuur</option>
+    <option value="4">Comedy</option>
+    <option value="5">Documentaire</option>
+    <option value="6">Drama</option>
+    <option value="7">Familiefilm</option>
+    <option value="8">Fantasy</option>
+    <option value="9">History</option>
+    <option value="10">Horror</option>
+    <option value="11">Kinderfilm</option>
+    <option value="12">Misdaad</option>
+    <option value="13">Musical</option>
+    <option value="14">Muziek</option>
+    <option value="15">Nederlands</option>
+    <option value="16">Oorlog</option>
+    <option value="17">Romantiek</option>
+    <option value="18">Science Fiction</option>
+    <option value="19">Thriller</option>
+    <option value="20">Western</option>
+</select>
+</div>
+
+<div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Leeftijd:</option>
+    <option value="1">Alle leeftijden</option>
+    <option value="2">6+</option>
+    <option value="3">9+</option>
+    <option value="4">12+</option>
+    <option value="5">14+</option>
+    <option value="6">16+</option>
+    <option value="7">18+</option>
+</select>
+</div>
+
+<div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Versie:</option>
+    <option value="1">2D</option>
+    <option value="2">3D</option>
+    <option value="3">4DX</option>
+    <option value="4">Dolby Atmos</option>
+</select>
+</div> <br><br><br>
+
+        <div class="allefilms">
+            @foreach(var film in Model)
+            {
+                <div class="film">
+                    <a href="/film/@film.Id">
+                        <img src ="@film.Poster" class ="films">
+                        <h3>@film.Naam</h3>
+                    </a>
+                </div>
+            }
+        </div>
+            @*<div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039632_144828.jpg&alt=img/movie_placeholder.png" class="films"> <h3>spider-man: no way home</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/40044180_143762.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the kings man</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/monster-family-2_ps_1_jpg_sd-low_copyright-2021-ww-entertainment.jpg&alt=img/movie_placeholder.png" class="films"> </a> <h3>monster family 2</h3> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039585_141925.jpg&alt=img/movie_placeholder.png" class="films"> <h3>house of gucci</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/40042198_141950.jpg&alt=img/movie_placeholder.png" class="films"> <h3>encanto</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02039083_135092.jpg&alt=img/movie_placeholder.png" class="films"> <h3>no time to die</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/the-matrix-resurrections_ps_1_jpg_sd-low_copyright-2021-warner-bros-entertainment-inc-all-rights-reserved.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the matrix: ressurections</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02030988_145486.jpg&alt=img/movie_placeholder.png" class="films"> <h3>scream</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/15002150_143066.jpg&alt=img/movie_placeholder.png" class="films"> <h3>king richard</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038783_145504.jpg&alt=img/movie_placeholder.png" class="films"> <h3>sing 2</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/44990125_145860.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the alipinist</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/93010126_146014.jpg&alt=img/movie_placeholder.png" class="films"> <h3>maya en het gouden ei</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038455_146581.jpg&alt=img/movie_placeholder.png" class="films"> <h3>uncharted</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/15002100_142451.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the batman</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/43000018_146481.jpg&alt=img/movie_placeholder.png" class="films"> <h3>dog</h3> </a> </div>            
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/47044034_146277.jpg&alt=img/movie_placeholder.png" class="films"> <h3>blacklight</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039598_145971.jpg&alt=img/movie_placeholder.png" class="films"> <h3>jackass forever</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/15002206_147463.jpg&alt=img/movie_placeholder.png" class="films"> <h3>fantastic beasts: the secrets of dumbledore</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02039700_144869.jpg&alt=img/movie_placeholder.png" class="films"> <h3>sonic the hedgehog 2</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/37020227_146861.jpg&alt=img/movie_placeholder.png" class="films"> <h3>de drekkies</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/1.website2022/05.%20filmposters/death-on-the-nile_ps_1_jpg_sd-low_copyright-the-walt-disney-company-2020.jpg&alt=img/movie_placeholder.png" class="films"> <h3>death on the nile</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>
+            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>*@
+        </div>
+</div>
+
+<script>
+var x, i, j, l, ll, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>
+
 </body>
