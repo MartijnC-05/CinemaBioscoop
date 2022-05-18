@@ -20,8 +20,8 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        [Route("Films")]
-        public IActionResult Films()
+        [Route("Films_oud")]
+        public IActionResult Films_oud()
         {
             return View();
         }
@@ -170,8 +170,8 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        [Route("Database")]
-        public IActionResult Database()
+        [Route("Films")]
+        public IActionResult Films()
         {
             //lijst met producten ophalen
             var films = GetAllFilms();
