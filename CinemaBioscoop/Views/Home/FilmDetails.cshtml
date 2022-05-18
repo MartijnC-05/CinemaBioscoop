@@ -1,6 +1,11 @@
 ﻿@using CinemaBioscoop.Database
 @model Film
 
+@{
+    ViewData["Title"] = @Model.Naam;
+    ViewData["currentTab"] = "films";
+}
+
 @*@{
     ViewData["Title"] = Model.Naam;
 }*@
