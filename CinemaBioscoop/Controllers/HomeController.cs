@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using MySql.Data;
 using CinemaBioscoop.Database;
+using MySql.Data.MySqlClient;
 
 namespace CinemaBioscoop.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -137,6 +140,7 @@ namespace CinemaBioscoop.Controllers
         {
             if (ModelState.IsValid)
             {
+                SavePerson(person);
                 // todo: oplsaan in database
                 return Redirect("Succes");
             }
@@ -148,6 +152,22 @@ namespace CinemaBioscoop.Controllers
         public IActionResult Succes()
         {
             return View();
+        }
+
+        private void SavePerson(Person person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO contact(naam, achternaam, email, telefoon, bericht) VALUES(?naam, ?achternaam, ?email, ?telefoon, ?bericht)", conn);
+
+                cmd.Parameters.Add("?naam", MySqlDbType.Text).Value = person.Voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.Achternaam;
+                cmd.Parameters.Add("?email", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?telefoon", MySqlDbType.Text).Value = person.Telefoon;
+                cmd.Parameters.Add("?bericht", MySqlDbType.Text).Value = person.Bericht;
+                cmd.ExecuteNonQuery();
+            }
         }
 
         [Route("Bestellen")]
