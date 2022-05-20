@@ -17,7 +17,11 @@ namespace CinemaBioscoop.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            //lijst met producten ophalen
+            var films = GetAllFilms();
+
+            //Lijst met producten in de html stoppen
+            return View(films);
         }
 
         [Route("Films_oud")]
@@ -221,8 +225,8 @@ namespace CinemaBioscoop.Controllers
             f.Categorie2 = row["filmcategorie_2"].ToString();
             f.Naam = row["naam"].ToString();
             f.Omschrijving = row["beschrijving"].ToString();
-            f.Regisseur = row["regisseur"].ToString();
-            f.Cast = row["cast"].ToString();
+            f.Regisseur = row["regisseur_1"].ToString();
+            f.Cast = row["cast_1"].ToString();
             f.Release = row["release"].ToString();
             f.Speelduur = row["speelduur"].ToString();
             f.Taal = row["taal"].ToString();

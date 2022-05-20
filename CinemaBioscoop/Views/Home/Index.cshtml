@@ -1,4 +1,6 @@
-﻿@{
+﻿@using CinemaBioscoop.Database
+@model List<Film>
+@{
     ViewData["Title"] = "Home Page";
     ViewData["currentTab"] = "home";
 }
@@ -44,7 +46,16 @@
 
       <H1>Films:</H1>
         <div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true , "wrapAround": true, "pageDots": false}'>
-		    <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038455_146581.jpg&alt=img/movie_placeholder.png" class="films"> <h3>Uncharted</h3> </a></div>
+            @foreach(var film in Model)
+            {
+                <div class="gallery-cell">
+                    <a href="/film/@film.Id">
+                        <img src ="@film.Poster" class ="films">
+                        <h3>@film.Naam</h3>
+                    </a>
+                </div>
+            }
+		    <!-- div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038455_146581.jpg&alt=img/movie_placeholder.png" class="films"> <h3>Uncharted</h3> </a></!--div>
             <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039632_144828.jpg&alt=img/movie_placeholder.png" class="films"> <h3>SPIDER-MAN: NO WAY HOME</h3> </a></div>
             <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/40044180_143762.jpg&alt=img/movie_placeholder.png" class="films"> <h3>THE KINGS MAN</h3> </a></div>
             <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/Monster-Family-2_ps_1_jpg_sd-low_Copyright-2021-WW-Entertainment.jpg&alt=img/movie_placeholder.png" class="films"> <h3>MONSTER FAMILY 2</h3> </a></div>
@@ -57,7 +68,7 @@
             <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038783_145504.jpg&alt=img/movie_placeholder.png" class="films"><h3>SING 2</h3></a></div>
             <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/1.WEBSITE2022/05.%20FILMPOSTERS/Death-on-the-Nile_ps_1_jpg_sd-low_Copyright-The-Walt-Disney-Company-2020.jpg&alt=img/movie_placeholder.png" class="films"><h3>DEATH ON THE NILE</h3></a></div>
             <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/44990125_145860.jpg&alt=img/movie_placeholder.png" class="films"><h3>HOUSE</h3><h3>THE ALIPINST</h3></a></div>
-            <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/93010126_146014.jpg&alt=img/movie_placeholder.png" class="films"><h3>MAYA EN HET GOUDEN EI</h3></a></div>
+            <div class="gallery-cell"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/93010126_146014.jpg&alt=img/movie_placeholder.png" class="films"><h3>MAYA EN HET GOUDEN EI</h3></a></div-->
         </div><br><br>
 
     <H1>Kinderen:</H1>

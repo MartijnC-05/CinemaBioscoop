@@ -151,6 +151,7 @@ footer {
 
 footer h2 {
     font-size: 18px;
+    color: black;
 }
 
 /*image slidebar*/
@@ -985,4 +986,8 @@ span{
     padding: 10px;
     justify-content: center;
     text-decoration:none;
+}
+
+.cookies h2{
+    color: white;
 }
