@@ -991,3 +991,15 @@ span{
 .cookies h2{
     color: white;
 }
+
+.privacy ul, li{
+    color: white;
+}
+
+.privacy ul ul{
+    padding-left: 50px;
+}
+
+.privacy h2{
+    color: white;
+}
