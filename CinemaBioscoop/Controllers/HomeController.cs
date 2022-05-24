@@ -141,7 +141,6 @@ namespace CinemaBioscoop.Controllers
             if (ModelState.IsValid)
             {
                 SavePerson(person);
-                // todo: oplsaan in database
                 return Redirect("Succes");
             }
 
@@ -237,6 +236,7 @@ namespace CinemaBioscoop.Controllers
             Film f = new Film(); ;
             f.Trailer = row["trailer"].ToString();
             f.Poster = row["poster"].ToString();
+            f.Uitgelicht = row["uitgelicht"].ToString();
             f.Kijkwijzer1 = row["kijkwijzer_1"].ToString();
             f.Kijkwijzer2 = row["kijkwijzer_2"].ToString();
             f.Kijkwijzer3 = row["kijkwijzer_3"].ToString();

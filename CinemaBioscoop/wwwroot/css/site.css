@@ -510,7 +510,7 @@ p{
 .detailmidden {
     background-color: transparent;
     width: 50%;
-    height: 500px;
+    min-height: 500px;
     float: left;
     margin-right: 5%;
     padding: 10px;
@@ -990,6 +990,11 @@ span{
 
 .cookies h2{
     color: white;
+}
+
+.privacy ul {
+    font-size: 1vw;
+    font-weight: bold;
 }
 
 .privacy ul, li{
