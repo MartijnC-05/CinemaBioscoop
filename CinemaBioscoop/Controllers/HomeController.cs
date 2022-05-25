@@ -27,12 +27,6 @@ namespace CinemaBioscoop.Controllers
             return View(films);
         }
 
-        [Route("Films_oud")]
-        public IActionResult Films_oud()
-        {
-            return View();
-        }
-
         [Route("Filmagenda")]
         public IActionResult Filmagenda()
         {
@@ -44,13 +38,6 @@ namespace CinemaBioscoop.Controllers
         {
             return View();
         }
-
-        [Route("Bestellen1")]
-        public IActionResult Bestellen1()
-        {
-            return View();
-        }
-
 
         [Route("Contact")]
         public IActionResult Contact()

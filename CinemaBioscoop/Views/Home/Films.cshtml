@@ -5,18 +5,6 @@
     ViewData["currentTab"] = "films";
 }
 
-@*<body>
-    <div class="page-content">
-        <h1 class="display-4">Welcome!</h1>
-        <ul>
-            @foreach(var product in Model)
-        {
-            <a href="/product/@product.Id" id="product">@product.Naam - @product.Prijs</a>
-        }
-        </ul>
-    </div>
-</body>*@
-
 <body>
 <div class="page-content">
 <H1>Nu in de bioscoop</H1> <br>
@@ -81,32 +69,7 @@
                 </div>
             }
         </div>
-            @*<div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039632_144828.jpg&alt=img/movie_placeholder.png" class="films"> <h3>spider-man: no way home</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/40044180_143762.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the kings man</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/monster-family-2_ps_1_jpg_sd-low_copyright-2021-ww-entertainment.jpg&alt=img/movie_placeholder.png" class="films"> </a> <h3>monster family 2</h3> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039585_141925.jpg&alt=img/movie_placeholder.png" class="films"> <h3>house of gucci</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/40042198_141950.jpg&alt=img/movie_placeholder.png" class="films"> <h3>encanto</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02039083_135092.jpg&alt=img/movie_placeholder.png" class="films"> <h3>no time to die</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/the-matrix-resurrections_ps_1_jpg_sd-low_copyright-2021-warner-bros-entertainment-inc-all-rights-reserved.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the matrix: ressurections</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02030988_145486.jpg&alt=img/movie_placeholder.png" class="films"> <h3>scream</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/15002150_143066.jpg&alt=img/movie_placeholder.png" class="films"> <h3>king richard</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038783_145504.jpg&alt=img/movie_placeholder.png" class="films"> <h3>sing 2</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/44990125_145860.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the alipinist</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/93010126_146014.jpg&alt=img/movie_placeholder.png" class="films"> <h3>maya en het gouden ei</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02038455_146581.jpg&alt=img/movie_placeholder.png" class="films"> <h3>uncharted</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/15002100_142451.jpg&alt=img/movie_placeholder.png" class="films"> <h3>the batman</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/43000018_146481.jpg&alt=img/movie_placeholder.png" class="films"> <h3>dog</h3> </a> </div>            
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/47044034_146277.jpg&alt=img/movie_placeholder.png" class="films"> <h3>blacklight</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/2039598_145971.jpg&alt=img/movie_placeholder.png" class="films"> <h3>jackass forever</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/15002206_147463.jpg&alt=img/movie_placeholder.png" class="films"> <h3>fantastic beasts: the secrets of dumbledore</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/02039700_144869.jpg&alt=img/movie_placeholder.png" class="films"> <h3>sonic the hedgehog 2</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/image/movies/37020227_146861.jpg&alt=img/movie_placeholder.png" class="films"> <h3>de drekkies</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=userfiles/1.website2022/05.%20filmposters/death-on-the-nile_ps_1_jpg_sd-low_copyright-the-walt-disney-company-2020.jpg&alt=img/movie_placeholder.png" class="films"> <h3>death on the nile</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>
-            <div class="film"> <a href="/detailpagina"> <img src="https://www.vuecinemas.nl/thumb?w=268&f=jpg&src=img/movie_placeholder.png&alt=img/movie_placeholder.png" class="films"> <h3>binnenkort</h3> </a> </div>*@
-        </div>
+    </div>
 
 
 <script>
