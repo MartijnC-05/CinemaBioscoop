@@ -143,11 +143,11 @@
             }
     </div><br/><br/>
 
-    <H1>Science fiction:</H1>
+    <H1>Drama:</H1>
     <div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true , "wrapAround": true, "pageDots": false}'>
             @foreach(var film in Model)
             {
-                if (@film.Categorie1 == "4")
+                if (@film.Categorie1 == "7")
                 {
                     <div class="gallery-cell">
                         <a href="/film/@film.Id">
@@ -157,7 +157,7 @@
                     </div>
                 }
 
-                else if (@film.Categorie2 == "4")
+                else if (@film.Categorie2 == "7")
                 {
                     <div class="gallery-cell">
                         <a href="/film/@film.Id">

@@ -10,8 +10,8 @@ namespace CinemaBioscoop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
-        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        //private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -45,88 +45,12 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
-        //[Route("Detailpagina")]
-        //public IActionResult Detailpagina()
-        //{
-        //    lijst met films ophalen
-        //    var films = GetAllFilms();
-
-        //    Lijst met films in de html stoppen
-        //    return View(films);
-        //}
-
-        //public List<Film> GetAllFilms()
-        //{
-        //    alle films ophalen uit de database
-        //    var rows = DatabaseConnector.GetRows("select * from film");
-
-        //    lijst maken om alle films in te stoppen
-        //    List<Film> films = new List<Film>();
-
-        //    foreach (var row in rows)
-        //    {
-        //        voor elke rij maken we nu een film
-        //        Film f = new Film();
-        //        f.Trailer = row["trailer"].ToString();
-        //        f.Poster = row["poster"].ToString();
-        //        f.Kijkwijzer1 = row["kijkwijzer_1"].ToString();
-        //        f.Kijkwijzer2 = row["kijkwijzer_2"].ToString();
-        //        f.Kijkwijzer3 = row["kijkwijzer_3"].ToString();
-        //        f.Kijkwijzer4 = row["kijkwijzer_4"].ToString();
-        //        f.Categorie1 = row["categorie1"].ToString();
-        //        f.Categorie2 = row["categorie2"].ToString();
-        //        f.Naam = row["naam"].ToString();
-        //        f.Omschrijving = row["beschrijving"].ToString();
-        //        f.Regisseur = row["regisseur"].ToString();
-        //        f.Cast = row["cast"].ToString();
-        //        f.Release = row["release"].ToString();
-        //        f.Speelduur = row["speelduur"].ToString();
-        //        f.Taal = row["taal"].ToString();
-        //        f.Ondertiteling = row["ondertiteling"].ToString();
-        //        f.Id = Convert.ToInt32(row["id"]);
-
-        //        en die film voegen we toe aan de lijst met producten
-        //        //films.Add(f);
-        //    }
-
-        //    return films;
-        //}
-
         [Route("Bestellen1")]
         public IActionResult Bestellen1()
         {
             return View();
         }
 
-        [Route("Bestellen2")]
-        public IActionResult Bestellen2()
-        {
-            return View();
-        }
-
-        [Route("Bestellen3")]
-        public IActionResult Bestellen3()
-        {
-            return View();
-        }
-
-        [Route("Bestellen4")]
-        public IActionResult Bestellen4()
-        {
-            return View();
-        }
-
-        [Route("Bestellen5")]
-        public IActionResult Bestellen5()
-        {
-            return View();
-        }
-
-        [Route("Bestellen6")]
-        public IActionResult Bestellen6()
-        {
-            return View();
-        }
 
         [Route("Contact")]
         public IActionResult Contact()
@@ -228,8 +152,39 @@ namespace CinemaBioscoop.Controllers
         {
             var film = GetFilm(id);
 
-            return View(film);
+            var Categorie1 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
+            var Categorie2 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie2}");
+
+            var regisseurRow = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur}");
+            var regisseur = GetRegisseurFromRow(regisseurRow[0]);
+
+            //var kijkwijzerRow = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.kijkwijzer}");
+            //var kijkwijzer = GetRegisseurFromRow(kijkwijzerRow[0]);
+
+            var model = new MovieDetail();
+            model.Film = film;
+            //model.Kijkwijzer = kijkwijzer;
+            model.Regisseur = regisseur;
+
+
+            return View(model);
         }
+
+        private Regisseur GetRegisseurFromRow(Dictionary<string, object> row)
+        {
+            Regisseur r = new Regisseur();
+            r.Id = Convert.ToInt32(row["id"]);
+            r.Voornaam = row["voornaam"].ToString();
+            return r;
+        }
+
+        //private Kijkwijzer GetKijkwijzerFromRow(Dictionary<string, object> row)
+        //{
+        //    Kijkwijzer k = new Kijkwijzer();
+        //    k.Id = Convert.ToInt32(row["id"]);
+        //    k.Image = row["image"].ToString();
+        //    return k;
+        //}
 
         private Film GetFilmFromRow(Dictionary<string,object> row)
         {
@@ -253,6 +208,7 @@ namespace CinemaBioscoop.Controllers
             f.Ondertiteling = row["ondertiteling"].ToString();
             f.Id = Convert.ToInt32(row["id"]);
 
+
             return f;
         }
 
@@ -260,7 +216,7 @@ namespace CinemaBioscoop.Controllers
         {
             //product ophalen uit de database op basis van het id
             var rows = DatabaseConnector.GetRows($"select * from film where id = {id}");
-
+            
             //we krijgen altijd een lijst terug maar er zou altijd één product in moeten zitten dus we pakken voor het gemak gewoon de eerste
             Film film = GetFilmFromRow(rows[0]);
 

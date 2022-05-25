@@ -1,8 +1,8 @@
 ﻿@using CinemaBioscoop.Database
-@model Film
+@model MovieDetail
 
 @{
-    ViewData["Title"] = @Model.Naam;
+    ViewData["Title"] = @Model.Film.Naam;
     ViewData["currentTab"] = "films";
 }
 
@@ -21,35 +21,35 @@
 <body>
 <div class="page-content">
     <div class="video">
-        <iframe width="1320" height="700" src="@Model.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1320" height="700" src="@Model.Film.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="detaillinks">
         <div class="poster">
-            <img src="@Model.Poster">
+            <img src="@Model.Film.Poster">
         </div>
         <div class="kijkwijzer">
-            <img src="@Model.Kijkwijzer1" style="margin-left: 5px;">
-            <img src="@Model.Kijkwijzer2">
-            <img src="@Model.Kijkwijzer3">
-            <img src="@Model.Kijkwijzer4">
+            <img src="@Model.Film.Kijkwijzer1" style="margin-left: 5px;">
+            <img src="@Model.Film.Kijkwijzer2">
+            <img src="@Model.Film.Kijkwijzer3">
+            <img src="@Model.Film.Kijkwijzer4">
         </div>
         <div class="categorie">
-            <h3>@Model.Categorie1</h3>
-            <h3>@Model.Categorie2</h3>
+            <h3>@Model.Film.Categorie1</h3>
+            <h3>@Model.Film.Categorie2</h3>
         </div>
     </div>
     <div class="detailmidden">
-        <h1>@Model.Naam</h1><br>
-        <h3>@Model.Omschrijving</h3><br>
+        <h1>@Model.Film.Naam</h1><br>
+        <h3>@Model.Film.Omschrijving</h3><br>
     
         <table>
             <tr>
                 <th>Regisseur</th>
-                <td>@Model.Regisseur</td>
+                <td>@Model.Regisseur.Voornaam</td>
             </tr>
             <tr>
                 <th>Cast</th>
-                <td>@Model.Cast</td>
+                <td>@Model.Film.Cast</td>
             </tr>
         </table>
 
@@ -59,19 +59,19 @@
         <table>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Release</th>
-                <td style="font-size: 13px;">@Model.Release</td>
+                <td style="font-size: 13px;">@Model.Film.Release</td>
             </tr>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Speelduur</th>
-                <td style="font-size: 13px;">@Model.Speelduur</td>
+                <td style="font-size: 13px;">@Model.Film.Speelduur</td>
             </tr>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Gesproken taal</th>
-                <td style="font-size: 13px;">@Model.Taal</td>
+                <td style="font-size: 13px;">@Model.Film.Taal</td>
             </tr>
             <tr>
                 <th style="font-size: 16px; width: 300px;">Ondertiteling</th>
-                <td style="font-size: 13px;">@Model.Ondertiteling</td>
+                <td style="font-size: 13px;">@Model.Film.Ondertiteling</td>
             </tr>
         </table>
     </div>
