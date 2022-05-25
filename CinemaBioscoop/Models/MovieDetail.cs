@@ -11,7 +11,10 @@ namespace CinemaBioscoop.Models
 
         public Filmcategorie Filmcategorie { get; set; }
 
-        public Kijkwijzer Kijkwijzer { get; set; }
+        public Kijkwijzer Kijkwijzer1 { get; set; }
+        public Kijkwijzer Kijkwijzer2 { get; set; }
+        public Kijkwijzer Kijkwijzer3 { get; set; }
+        public Kijkwijzer Kijkwijzer4 { get; set; }
 
     }
 }

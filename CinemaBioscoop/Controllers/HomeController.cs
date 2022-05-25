@@ -151,12 +151,23 @@ namespace CinemaBioscoop.Controllers
             var kijkwijzerRow1 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer1}");
             var kijkwijzer1 = GetKijkwijzerFromRow(kijkwijzerRow1[0]);
 
+            var kijkwijzerRow2 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer2}");
+            var kijkwijzer2 = GetKijkwijzerFromRow(kijkwijzerRow2[0]);
+            
+            var kijkwijzerRow3 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer3}");
+            var kijkwijzer3 = GetKijkwijzerFromRow(kijkwijzerRow3[0]);
+
+            var kijkwijzerRow4 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer4}");
+            var kijkwijzer4 = GetKijkwijzerFromRow(kijkwijzerRow4[0]);
 
             var model = new MovieDetail();
             model.Film = film;
             //model.Kijkwijzer = kijkwijzer;
             model.Regisseur = regisseur;
-            model.Kijkwijzer = kijkwijzer1;
+            model.Kijkwijzer1 = kijkwijzer1;
+            model.Kijkwijzer2 = kijkwijzer2;
+            model.Kijkwijzer3 = kijkwijzer3;
+            model.Kijkwijzer4 = kijkwijzer4;
 
 
             return View(model);
