@@ -10,8 +10,8 @@ namespace CinemaBioscoop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        //private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
-        private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -158,8 +158,8 @@ namespace CinemaBioscoop.Controllers
             var regisseurRow = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur}");
             var regisseur = GetRegisseurFromRow(regisseurRow[0]);
 
-            var filmcategorieRow = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
-            var filmcategorie = GetRegisseurFromRow(filmcategorieRow[0]);
+            //var filmcategorieRow = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
+            //var filmcategorie = GetFilmcategorieFromRow(filmcategorieRow[0]);
 
             //var kijkwijzerRow = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.kijkwijzer}");
             //var kijkwijzer = GetRegisseurFromRow(kijkwijzerRow[0]);
@@ -185,7 +185,7 @@ namespace CinemaBioscoop.Controllers
         {
             Filmcategorie c = new Filmcategorie();
             c.Id = Convert.ToInt32(row["id"]);
-            c.naam = row["naam"].ToString();
+            c.Naam = row["voornaam"].ToString();
             return c;
         }
 
