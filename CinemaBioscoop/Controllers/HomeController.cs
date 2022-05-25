@@ -139,8 +139,8 @@ namespace CinemaBioscoop.Controllers
         {
             var film = GetFilm(id);
 
-            var Categorie1 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
-            var Categorie2 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie2}");
+            //var Categorie1 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
+            //var Categorie2 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie2}");
 
             var regisseurRow = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur}");
             var regisseur = GetRegisseurFromRow(regisseurRow[0]);
@@ -148,13 +148,15 @@ namespace CinemaBioscoop.Controllers
             //var filmcategorieRow = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
             //var filmcategorie = GetFilmcategorieFromRow(filmcategorieRow[0]);
 
-            //var kijkwijzerRow = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.kijkwijzer}");
-            //var kijkwijzer = GetRegisseurFromRow(kijkwijzerRow[0]);
+            var kijkwijzerRow1 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer1}");
+            var kijkwijzer1 = GetKijkwijzerFromRow(kijkwijzerRow1[0]);
+
 
             var model = new MovieDetail();
             model.Film = film;
             //model.Kijkwijzer = kijkwijzer;
             model.Regisseur = regisseur;
+            model.Kijkwijzer = kijkwijzer1;
 
 
             return View(model);
@@ -168,6 +170,15 @@ namespace CinemaBioscoop.Controllers
             r.Achternaam = row["achternaam"].ToString();
             return r;
         }
+
+        private Kijkwijzer GetKijkwijzerFromRow(Dictionary<string, object> row)
+        {
+            Kijkwijzer k = new Kijkwijzer();
+            k.Id = Convert.ToInt32(row["id"]);
+            k.Image = row["image"].ToString();
+            return k;
+        }
+
         private Filmcategorie GetFilmcategorieFromRow(Dictionary<string, object> row)
         {
             Filmcategorie c = new Filmcategorie();
