@@ -158,6 +158,9 @@ namespace CinemaBioscoop.Controllers
             var regisseurRow = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur}");
             var regisseur = GetRegisseurFromRow(regisseurRow[0]);
 
+            var filmcategorieRow = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
+            var filmcategorie = GetRegisseurFromRow(filmcategorieRow[0]);
+
             //var kijkwijzerRow = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.kijkwijzer}");
             //var kijkwijzer = GetRegisseurFromRow(kijkwijzerRow[0]);
 
@@ -177,6 +180,13 @@ namespace CinemaBioscoop.Controllers
             r.Voornaam = row["voornaam"].ToString();
             r.Achternaam = row["achternaam"].ToString();
             return r;
+        }
+        private Filmcategorie GetFilmcategorieFromRow(Dictionary<string, object> row)
+        {
+            Filmcategorie c = new Filmcategorie();
+            c.Id = Convert.ToInt32(row["id"]);
+            c.naam = row["naam"].ToString();
+            return c;
         }
 
         //private Kijkwijzer GetKijkwijzerFromRow(Dictionary<string, object> row)
