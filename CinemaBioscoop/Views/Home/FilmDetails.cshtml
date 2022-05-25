@@ -28,10 +28,10 @@
             <img src="@Model.Film.Poster">
         </div>
         <div class="kijkwijzer">
-            <img src="@Model.Film.Kijkwijzer1" style="margin-left: 5px;">
-            <img src="@Model.Film.Kijkwijzer2">
-            <img src="@Model.Film.Kijkwijzer3">
-            <img src="@Model.Film.Kijkwijzer4">
+            <img src="/@Model.Film.Kijkwijzer1" style="margin-left: 5px;">
+            <img src="/@Model.Film.Kijkwijzer2"/>
+            <img src="/@Model.Film.Kijkwijzer3"/>
+            <img src="/@Model.Film.Kijkwijzer4"/>
         </div>
         <div class="categorie">
             <h3>@Model.Film.Categorie1</h3>
@@ -45,7 +45,7 @@
         <table>
             <tr>
                 <th>Regisseur</th>
-                <td>@Model.Regisseur.Voornaam</td>
+                <td>@Model.Regisseur.Voornaam @Model.Regisseur.Achternaam</td>
             </tr>
             <tr>
                 <th>Cast</th>

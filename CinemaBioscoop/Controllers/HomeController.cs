@@ -175,6 +175,7 @@ namespace CinemaBioscoop.Controllers
             Regisseur r = new Regisseur();
             r.Id = Convert.ToInt32(row["id"]);
             r.Voornaam = row["voornaam"].ToString();
+            r.Achternaam = row["achternaam"].ToString();
             return r;
         }
 
