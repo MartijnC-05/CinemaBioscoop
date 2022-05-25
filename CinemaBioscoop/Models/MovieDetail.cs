@@ -9,7 +9,9 @@ namespace CinemaBioscoop.Models
 
         public Regisseur Regisseur { get; set; }
 
-        public Filmcategorie Filmcategorie { get; set; }
+        public Filmcategorie Filmcategorie1 { get; set; }
+        public Filmcategorie Filmcategorie2 { get; set; }
+
 
         public Kijkwijzer Kijkwijzer1 { get; set; }
         public Kijkwijzer Kijkwijzer2 { get; set; }

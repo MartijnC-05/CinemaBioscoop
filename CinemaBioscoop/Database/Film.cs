@@ -10,8 +10,8 @@
         public string? Kijkwijzer2 { get; set; }
         public string? Kijkwijzer3 { get; set; }
         public string? Kijkwijzer4 { get; set; }
-        public string? Categorie1 { get; set; }
-        public string? Categorie2 { get; set; }
+        public string? Filmcategorie1 { get; set; }
+        public string? Filmcategorie2 { get; set; }
         public string? Naam { get; set; }
         public string? Omschrijving { get; set; }
         public string? Regisseur { get; set; }
@@ -20,6 +20,7 @@
         public string? Speelduur { get; set; }
         public string? Taal { get; set; }
         public string? Ondertiteling { get; set; }
+        //public string? Categorienaam { get; set; }
 
     }
     
