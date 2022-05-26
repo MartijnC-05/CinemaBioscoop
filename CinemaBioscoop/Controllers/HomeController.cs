@@ -138,15 +138,12 @@ namespace CinemaBioscoop.Controllers
         public IActionResult FilmDetails(int id)
         {
             var film = GetFilm(id);
+            
+            var regisseurRow1 = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur1}");
+            var regisseur1 = GetRegisseurFromRow(regisseurRow1[0]);
 
-            //var Categorie1 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
-            //var Categorie2 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie2}");
-
-            var regisseurRow = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur}");
-            var regisseur = GetRegisseurFromRow(regisseurRow[0]);
-
-            //var filmcategorieRow = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Categorie1}");
-            //var filmcategorie = GetFilmcategorieFromRow(filmcategorieRow[0]);
+            var regisseurRow2 = DatabaseConnector.GetRows($"select * from regisseur where id = {film.Regisseur2}");
+            var regisseur2 = GetRegisseurFromRow(regisseurRow2[0]);
 
             var kijkwijzerRow1 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer1}");
             var kijkwijzer1 = GetKijkwijzerFromRow(kijkwijzerRow1[0]);
@@ -168,8 +165,10 @@ namespace CinemaBioscoop.Controllers
 
             var model = new MovieDetail();
             model.Film = film;
-            //model.Kijkwijzer = kijkwijzer;
-            model.Regisseur = regisseur;
+            
+            model.Regisseur1 = regisseur1;
+            model.Regisseur2 = regisseur2;
+
             model.Kijkwijzer1 = kijkwijzer1;
             model.Kijkwijzer2 = kijkwijzer2;
             model.Kijkwijzer3 = kijkwijzer3;
@@ -206,7 +205,6 @@ namespace CinemaBioscoop.Controllers
             return c;
         }
 
-
         private Film GetFilmFromRow(Dictionary<string,object> row)
         {
             Film f = new Film(); ;
@@ -221,15 +219,14 @@ namespace CinemaBioscoop.Controllers
             f.Filmcategorie2 = row["filmcategorie_2"].ToString();
             f.Naam = row["naam"].ToString();
             f.Omschrijving = row["beschrijving"].ToString();
-            f.Regisseur = row["regisseur_1"].ToString();
-            f.Cast = row["cast_1"].ToString();
+            f.Regisseur1 = row["regisseur_1"].ToString();
+            f.Regisseur2 = row["regisseur_2"].ToString();
+            f.Cast = row["Cast"].ToString();
             f.Release = row["release"].ToString();
             f.Speelduur = row["speelduur"].ToString();
             f.Taal = row["taal"].ToString();
             f.Ondertiteling = row["ondertiteling"].ToString();
             f.Id = Convert.ToInt32(row["id"]);
-            //f.Categorienaam = row["categorienaam"].ToString();
-
 
             return f;
         }
