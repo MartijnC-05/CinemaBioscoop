@@ -20,17 +20,21 @@ namespace CinemaBioscoop.Controllers
 
         public IActionResult Index()
         {
-            //lijst met producten ophalen
+            //lijst met films ophalen
             var films = GetAllFilms();
 
-            //Lijst met producten in de html stoppen
+            //Lijst met films in de html stoppen
             return View(films);
         }
 
         [Route("Filmagenda")]
         public IActionResult Filmagenda()
         {
-            return View();
+            //lijst met films ophalen
+            var films = GetAllFilms();
+
+            //Lijst met films in de html stoppen
+            return View(films);
         }
 
         [Route("Bioscoop")]
@@ -107,10 +111,10 @@ namespace CinemaBioscoop.Controllers
         [Route("Films")]
         public IActionResult Films()
         {
-            //lijst met producten ophalen
+            //lijst met films ophalen
             var films = GetAllFilms();
 
-            //Lijst met producten in de html stoppen
+            //Lijst met films in de html stoppen
             return View(films);
         }
 

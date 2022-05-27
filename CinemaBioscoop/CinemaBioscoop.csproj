@@ -20,6 +20,7 @@
     <Content Remove="Views\Home\Privacy - Copy.cshtml" />
     <Content Remove="Views\Home\ShowAll.cshtml" />
     <Content Remove="Views\Home\Test.cshtml" />
+    <Content Remove="wwwroot\js\date.js" />
   </ItemGroup>
 
   <ItemGroup>

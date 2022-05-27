@@ -1,7 +1,11 @@
-﻿@{
+﻿@using CinemaBioscoop.Database
+@model List<Film>
+
+@{
     ViewData["Title"] = "Filmagenda";
     ViewData["currentTab"] = "filmagenda";
 }
+
 
 <body>
     <div class="page-content">
@@ -16,32 +20,34 @@
           </select>
         </div> <br><br>
 
+        @foreach(var film in Model)
+        {
         <div class="filmagenda">
-            <div class="filmagendafilm"> <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/Spider-Man_-No-Way-Home_ps_1_jpg_sd-high_Copyright-MARVEL-2021-CPII-All-Rights-Reserved.jpg"> </div>
+            <div class="filmagendafilm"> <img src="@film.Poster"> </div>
                 <div class="informatiefilm">
-                    <h3 class="title">Spider- Man: No Way Home</h3>
+                    <h3 class="title">@film.Naam</h3>
                     <div class="filmtijden">
-                        <a href="#">
+                        <a href="/film/@film.Id">
                         <div class="tijdversie">
                             <h3>10:00 - 13:00</h3>
                             <h3>2D</h3>
                         </div></a>
-                        <a href="#">
+                        <a href="/film/@film.Id">
                         <div class="tijdversie">
                             <h3>11:30 - 14:30</h3>
                             <h3>2D</h3>
                         </div></a>
-                        <a href="#">
+                        <a href="/film/@film.Id">
                         <div class="tijdversie">
                             <h3>13:00 - 16:00</h3>
                             <h3>3D</h3>
                         </div></a>
-                        <a href="#">
+                        <a href="/film/@film.Id">
                         <div class="tijdversie">
                             <h3>14:30 - 17:30</h3>
                             <h3>2D</h3>
                         </div></a>
-                        <a href="#">
+                        <a href="/film/@film.Id">
                         <div class="tijdversie">
                             <h3>16:00 - 19:00</h3>
                             <h3>3D</h3>
@@ -49,94 +55,7 @@
                     </div>
                 </div>
         </div>
-
-        <div class="filmagenda">
-            <div class="filmagendafilm"> <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/other/api/filmdepot/v1/movie/download/19838_143738_ps_sd-high.jpg"> </div>
-                <div class="informatiefilm">
-                    <h3 class="title">Sing 2</h3>
-                    <div class="filmtijden">
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>10:30 - 12:30</h3>
-                            <h3>2D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>13:30 - 15:30</h3>
-                            <h3>2D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>16:30 - 18:30</h3>
-                            <h3>2D</h3>
-                        </div></a>
-                    </div>
-                </div>
-        </div>
-
-        <div class="filmagenda">
-            <div class="filmagendafilm"> <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/The-Matrix-Resurrections_ps_1_jpg_sd-high_Copyright-2021-Warner-Bros-Entertainment-Inc-All-Rights-Reserved.jpg"> </div>
-                <div class="informatiefilm">
-                    <h3 class="title">The Matrix: Resurrections</h3>
-                    <div class="filmtijden">
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>11:00 - 14:00</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>11:00 - 14:00</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>12:30 - 15:30</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>11:00 - 14:00</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>15:00 - 18:00</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>16:30 - 19:30</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                    </div>
-                </div>
-        </div>
-
-        <div class="filmagenda">
-            <div class="filmagendafilm"> <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/Encanto-NL-_ps_1_jpg_sd-high_Copyright-The-Walt-Disney-Company-2021.png"> </div>
-                <div class="informatiefilm">
-                    <h3 class="title">Encanto</h3>
-                    <div class="filmtijden">
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>12:00 - 15:00</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>14:00 - 17:00</h3>
-                            <h3>2D</h3>
-                        </div></a>
-                        <a href="#">
-                        <div class="tijdversie">
-                            <h3>16:00 - 19:00</h3>
-                            <h3>3D</h3>
-                        </div></a>
-                    </div>
-                </div>
-        </div>
-        <h3>etc...</h3>
+        }
     </div>
 
 
@@ -221,5 +140,28 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 </script>
 
+@*<script type="text/javascript">
+    var today = new Date();
+    var day = today.getDay();
+    var daylist = ["Zondag","Maandag","Dinsdag","Woensdag ","Donderdag","Vrijdag","Zaterdag"];
+    var monthlist = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"]
+    var date = today.getDate();
+    var month = today.getMonth();  
+    document.getElementById("vandaag").innerHTML = daylist[day]+ " "+ date + " "+ monthlist[month];
+
+    var tomorrow = new Date(today)
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    var day = tomorrow.getDay();
+    var date = tomorrow.getDate();
+    var month = tomorrow.getMonth();  
+    document.getElementById("morgen").innerHTML = daylist[day]+ " "+ date + " "+ monthlist[month];
+
+    var overmorgen = new Date(today)
+    overmorgen.setDate(overmorgen.getDate() + 2)
+    var day = overmorgen.getDay();
+    var date = overmorgen.getDate();
+    var month = overmorgen.getMonth();  
+    document.getElementById("overmorgen").innerHTML = daylist[day]+ " "+ date + " "+ monthlist[month];
+  </script>*@
 
 </body>
