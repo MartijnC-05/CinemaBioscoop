@@ -1,4 +1,7 @@
-﻿@{
+﻿@using CinemaBioscoop.Database
+@model MovieDetail
+
+@{
     ViewData["Title"] = "Bestellen";
     ViewData["currentTab"] = "films";
 }
@@ -8,19 +11,19 @@
         <form id="regForm" action="">
             <div class="tab">
                 <div class="bestellinksboven">
-                    <h1>No time to die</h1>
+                    <h1>@Model.Film.Naam</h1>
                     <div class="bestelposter">
-                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                        <img src="@Model.Film.Poster" style="width: 450%;">
                     </div>
                     <div class="kijkwijzer">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                        <img src="@Model.Kijkwijzer1.Image" style="margin-left: 5px;">
+                        <img src="@Model.Kijkwijzer2.Image">
+                        <img src="@Model.Kijkwijzer3.Image">
+                        <img src="@Model.Kijkwijzer4.Image">
                     </div>
                     <div class="categorie">
-                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie1.Categorienaam</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie2.Categorienaam</h3>
                     </div>
                 </div>
                 <div class="bestelrechts">
@@ -127,27 +130,27 @@
                             <a onclick="nextPrev(1)">Volgende stap</a>
                         </div>
                         <div class="prev">
-                            <a href="/detailpagina"> ⬅ Vorige stap</a>
+                            <a href="/film/@Model.Film.Id"> ⬅ Vorige stap</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tab">
                 <div class="bestellinksboven">
-                    <h1>No time to die</h1>
+                    <h1>@Model.Film.Naam</h1>
                     <div class="bestelposter">
-                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                        <img src="@Model.Film.Poster" style="width: 450%;">
                     </div>
                     <div class="kijkwijzer">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                        <img src="@Model.Kijkwijzer1.Image" style="margin-left: 5px;">
+                        <img src="@Model.Kijkwijzer2.Image">
+                        <img src="@Model.Kijkwijzer3.Image">
+                        <img src="@Model.Kijkwijzer4.Image">
                     </div>
                     <div class="categorie" style="margin-bottom: 40px; ">
-                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
-                    </div>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie1.Categorienaam</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie2.Categorienaam</h3>
+                    </div><br />
                     <h3 style="margin-left: 5px;">Datum film</h3>
                     <h3 style="margin-left: 5px;">Tijd film</h3>
                 </div>
@@ -280,20 +283,20 @@
             </div>
             <div class="tab">
                 <div class="bestellinksboven">
-                    <h1>No time to die</h1>
+                    <h1>@Model.Film.Naam</h1>
                     <div class="bestelposter">
-                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                        <img src="@Model.Film.Poster" style="width: 450%;">
                     </div>
                     <div class="kijkwijzer">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                        <img src="@Model.Kijkwijzer1.Image" style="margin-left: 5px;">
+                        <img src="@Model.Kijkwijzer2.Image">
+                        <img src="@Model.Kijkwijzer3.Image">
+                        <img src="@Model.Kijkwijzer4.Image">
                     </div>
                     <div class="categorie" style="margin-bottom: 40px; ">
-                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
-                    </div>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie1.Categorienaam</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie2.Categorienaam</h3>
+                    </div><br />
                     <h3 style="margin-left: 5px;">Datum film</h3>
                     <h3 style="margin-left: 5px;">Tijd film</h3>
                 </div>
@@ -454,20 +457,20 @@
             </div>
             <div class="tab">
                 <div class="bestellinksboven">
-                    <h1>No time to die</h1>
+                    <h1>@Model.Film.Naam</h1>
                     <div class="bestelposter">
-                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                        <img src="@Model.Film.Poster" style="width: 450%;">
                     </div>
                     <div class="kijkwijzer">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                        <img src="@Model.Kijkwijzer1.Image" style="margin-left: 5px;">
+                        <img src="@Model.Kijkwijzer2.Image">
+                        <img src="@Model.Kijkwijzer3.Image">
+                        <img src="@Model.Kijkwijzer4.Image">
                     </div>
                     <div class="categorie"style="margin-bottom: 40px; ">
-                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
-                    </div>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie1.Categorienaam</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie2.Categorienaam</h3>
+                    </div><br />
                     <h3 style="margin-left: 5px;">Datum film</h3>
                     <h3 style="margin-left: 5px;">Tijd film</h3>
                 </div>
@@ -492,10 +495,7 @@
                         </div>
                     </div>
                     <div class="login">
-                        <h1>Of log in met uw Cinema biocoop account</h1>
-                        <h3>of misschien moeten we hier maken dat je verplicht moet inloggen met je cinemabioscoop account en dat je een account kunt aanmaken</h3><br />
-                        <a href="/inloggen" class="inloggen">Inloggen</a>
-                        <a href="/createaccount" class="inloggen">Maak een account aan</a><br /><br /><br /><br />
+                        <br /><br /><br /><br />
                     </div>
                     <div class="voorwaarden">
                         <input type="checkbox" id="algemenevoorwaarden" name="algemenevoorwaarden" value="akkoord"><label for="algemenevoorwaarden" required> Ik ga akkoord met de <a href="/algemenevoorwaarden">algemene voorwaarden</a></label><br>
@@ -522,20 +522,20 @@
             </div>
             <div class="tab">
                 <div class="bestellinksboven">
-                    <h1>No time to die</h1>
+                    <h1>@Model.Film.Naam</h1>
                     <div class="bestelposter">
-                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                        <img src="@Model.Film.Poster" style="width: 450%;">
                     </div>
                     <div class="kijkwijzer">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                        <img src="@Model.Kijkwijzer1.Image" style="margin-left: 5px;">
+                        <img src="@Model.Kijkwijzer2.Image">
+                        <img src="@Model.Kijkwijzer3.Image">
+                        <img src="@Model.Kijkwijzer4.Image">
                     </div>
                     <div class="categorie" style="margin-bottom: 40px; ">
-                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
-                    </div>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie1.Categorienaam</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie2.Categorienaam</h3>
+                    </div><br />
                     <h3 style="margin-left: 5px;">Datum film</h3>
                     <h3 style="margin-left: 5px;">Tijd film</h3>
                 </div>
@@ -605,20 +605,20 @@
             </div>
             <div class="tab">
                 <div class="bestellinksboven">
-                    <h1>No time to die</h1>
+                    <h1>@Model.Film.Naam</h1>
                     <div class="bestelposter">
-                        <img src="https://media.pathe.nl/nocropthumb/360x508/gfx_content/PathePartners/movie-24292-NTTD_DIGTAL_1SHEET_ICONIC_TUX_NED-30sept.jpg" style="width: 450%;">
+                        <img src="@Model.Film.Poster" style="width: 450%;">
                     </div>
                     <div class="kijkwijzer">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-12-gray-32.png" style="margin-left: 5px;">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-fear-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-explicitlanguage-gray-32.png">
-                        <img src="https://www.pathe.nl/assets/img/icons/kijkwijzer/kijkwijzer-violence-gray-32.png">
+                        <img src="@Model.Kijkwijzer1.Image" style="margin-left: 5px;">
+                        <img src="@Model.Kijkwijzer2.Image">
+                        <img src="@Model.Kijkwijzer3.Image">
+                        <img src="@Model.Kijkwijzer4.Image">
                     </div>
                     <div class="categorie" style="margin-bottom: 40px; ">
-                        <h3 style="width:40px; padding-left:5px; margin-left:5px; float:left;">Actie</h3>
-                        <h3 style="width:65px; padding-left:5px; margin-left:5px; float:left;">Avontuur</h3>
-                    </div>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie1.Categorienaam</h3>
+                        <h3 style="padding-left:5px; margin-left:5px; float:left;">@Model.Filmcategorie2.Categorienaam</h3>
+                    </div><br />
                     <h3 style="margin-left: 5px;">Datum film</h3>
                     <h3 style="margin-left: 5px;">Tijd film</h3>
                     </div>

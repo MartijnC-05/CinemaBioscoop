@@ -84,10 +84,41 @@ namespace CinemaBioscoop.Controllers
             }
         }
 
-        [Route("Bestellen")]
-        public IActionResult Bestellen()
+        [Route("/film/{id}/Bestellen")]
+        public IActionResult Bestellen(int id)
         {
-            return View();
+            var film = GetFilm(id);
+
+            var kijkwijzerRow1 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer1}");
+            var kijkwijzer1 = GetKijkwijzerFromRow(kijkwijzerRow1[0]);
+
+            var kijkwijzerRow2 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer2}");
+            var kijkwijzer2 = GetKijkwijzerFromRow(kijkwijzerRow2[0]);
+
+            var kijkwijzerRow3 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer3}");
+            var kijkwijzer3 = GetKijkwijzerFromRow(kijkwijzerRow3[0]);
+
+            var kijkwijzerRow4 = DatabaseConnector.GetRows($"select * from kijkwijzer where id = {film.Kijkwijzer4}");
+            var kijkwijzer4 = GetKijkwijzerFromRow(kijkwijzerRow4[0]);
+
+            var FilmcategorieRow1 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Filmcategorie1}");
+            var filmcategorie1 = GetFilmcategorieFromRow(FilmcategorieRow1[0]);
+
+            var FilmcategorieRow2 = DatabaseConnector.GetRows($"select * from filmcategorie where id = {film.Filmcategorie2}");
+            var filmcategorie2 = GetFilmcategorieFromRow(FilmcategorieRow2[0]);
+
+            var model = new MovieDetail();
+            model.Film = film;
+
+            model.Kijkwijzer1 = kijkwijzer1;
+            model.Kijkwijzer2 = kijkwijzer2;
+            model.Kijkwijzer3 = kijkwijzer3;
+            model.Kijkwijzer4 = kijkwijzer4;
+
+            model.Filmcategorie1 = filmcategorie1;
+            model.Filmcategorie2 = filmcategorie2;
+
+            return View(model);
         }
 
         [Route("Privacy")]
