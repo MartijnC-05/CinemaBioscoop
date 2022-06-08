@@ -1009,3 +1009,31 @@ span{
 .privacy h2{
     color: white;
 }
+
+.pnf-left{
+    background-color:red;
+    width:45%;
+    height: 400px;
+    float: left;
+}
+
+.pnf-right{
+    background-color:blue;
+    width: 45%;
+    height: 400px;
+    float: left;
+
+}
+
+.pnf-right img{
+    height: 100%;
+
+}
+
+.PageNotFound h1{
+    font-size: 50px;
+}
+
+.PageNotFound h1 {
+    font-size: 50px;
+}

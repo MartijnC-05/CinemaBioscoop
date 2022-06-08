@@ -10,8 +10,8 @@ namespace CinemaBioscoop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
-        //private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        //private readonly string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
+        private readonly string connectionString = "Server=172.16.160.21;Port=3306;Database=110739;Uid=110739;Pwd=inf2122sql;";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -39,6 +39,12 @@ namespace CinemaBioscoop.Controllers
 
         [Route("Bioscoop")]
         public IActionResult Bioscoop()
+        {
+            return View();
+        }
+
+        [Route("404")]
+        public IActionResult PageNotFound()
         {
             return View();
         }
@@ -144,6 +150,10 @@ namespace CinemaBioscoop.Controllers
         {
             //lijst met films ophalen
             var films = GetAllFilms();
+
+            var genres = DatabaseConnector.GetRows("select * from filmcategorie");
+            ViewData["genres"] = genres;
+
 
             //Lijst met films in de html stoppen
             return View(films);
