@@ -1011,23 +1011,48 @@ span{
 }
 
 .pnf-left{
-    background-color:red;
+    background-color: transparent;
     width:45%;
-    height: 400px;
+    height: 70vh;
     float: left;
+
+}
+
+.pnf-left a{
+    border-radius: 15px;
+    width: 200px;
+    height: 20px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    background-color: #FEDA38;
+    text-transform: uppercase;
+}
+
+.pnf-left a:hover {
+    color: #f86600;
 }
 
 .pnf-right{
-    background-color:blue;
+    background-color:transparent;
     width: 45%;
-    height: 400px;
+    height: 70vh;
     float: left;
 
 }
 
 .pnf-right img{
     height: 100%;
+    float: right;
+    margin-right: -5vw;
 
+}
+
+.pnf-left .text{
+    margin-top: 20vh;
 }
 
 .PageNotFound h1{
