@@ -58,7 +58,7 @@
         <a class="tekst" href="/privacy">Privacy</a>
         <a class="tekst" href="/Contact">Contact</a>
         <a class="tekst" href="/FAQ">F.A.Q.</a>
-        <button class="btn-toggle">donker/licht thema</button>
+        <button class="btn-toggle">dark/light mode</button>
         <H2> 
             <a href="http://www.instagram.com">
                 <i class="fa-brands fa-instagram"></i> 
@@ -80,17 +80,15 @@
     <script>
       const btn = document.querySelector(".btn-toggle");
       const theme = document.querySelector("#theme-link");
-      const mode = localStorage.getItem('mode')
       btn.addEventListener("click", function() {
-          console.log('het werkt!')
         // Swap out the URL for the different stylesheets
-              if /*(theme.getAttribute("href") == "/css/lightmode.css")*/ mode = dark {
+              if (theme.getAttribute("href") == "/css/lightmode.css") {
                   theme.href = "/css/site.css";
-                  localStorage.setItem('mode', 'dark');
+                  //localStorage.setItem('mode', 'dark');
                   console.log('darkmode')
               } else {
                   theme.href = "/css/lightmode.css";
-                  localStorage.setItem('mode', 'light');
+                  //localStorage.setItem('mode', 'light');
                   console.log('lightmode')
               }
        });
