@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CinemaBioscoop</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" id="theme-link" asp-append-version="true" />
     
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png">
@@ -58,6 +58,7 @@
         <a class="tekst" href="/privacy">Privacy</a>
         <a class="tekst" href="/Contact">Contact</a>
         <a class="tekst" href="/FAQ">F.A.Q.</a>
+        <button class="btn-toggle">donker/licht thema</button>
         <H2> 
             <a href="http://www.instagram.com">
                 <i class="fa-brands fa-instagram"></i> 
@@ -75,5 +76,26 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+      const btn = document.querySelector(".btn-toggle");
+      const theme = document.querySelector("#theme-link");
+      const mode = localStorage.getItem('mode')
+      btn.addEventListener("click", function() {
+          console.log('het werkt!')
+        // Swap out the URL for the different stylesheets
+              if /*(theme.getAttribute("href") == "/css/lightmode.css")*/ mode = dark {
+                  theme.href = "/css/site.css";
+                  localStorage.setItem('mode', 'dark');
+                  console.log('darkmode')
+              } else {
+                  theme.href = "/css/lightmode.css";
+                  localStorage.setItem('mode', 'light');
+                  console.log('lightmode')
+              }
+       });
+    </script>
+
+
 </body>
 </html>
