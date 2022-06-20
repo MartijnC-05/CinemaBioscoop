@@ -314,7 +314,7 @@ header .search-container button {
 }
 
 .select-selected {
-    background-color: #000014;
+    background-color: white;
 }
 
 /*style the arrow inside the select element:*/
@@ -337,23 +337,23 @@ header .search-container button {
 
 /*style the items (options), including the selected item:*/
 .select-items div, .select-selected {
-    color: #ffffff;
+    color: #000000;
     padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    border: 1px solid black;
+    border-color: black black rgb(0 0 0) black;
     cursor: pointer;
     user-select: none;
 }
 
 .select-items :hover {
-    color: #f86600;
+    /*color: white;*/
     border-left: 2px solid #f86600;
 }
 
 /*style items (options):*/
 .select-items {
     position: absolute;
-    background-color: #000014;
+    background-color: white;
     top: 100%;
     left: 0;
     right: 0;
@@ -375,14 +375,15 @@ header .search-container button {
     width: 110%;
 }
 
-.filmagenda{
+.filmagenda {
     display: inline-block;
     position: relative;
-    width:100%;
+    width: 100%;
     background-color: white;
     border-radius: 20px;
     min-height: 50px;
     margin-bottom: 20px;
+    outline: black solid 1px;
 }
 
 .filmagendafilm {
@@ -455,15 +456,15 @@ p{
     float: left;
 }
 
-.bioscoopinfo{
+.bioscoopinfo {
     width: 30%;
     background-color: white;
     float: left;
     margin-left: 5%;
     margin-bottom: 20px;
     border-radius: 20px;
-    padding: 20px
-
+    padding: 20px;
+    outline: black solid 1px;
 }
 
 .bioscoopinfo h1, .bioscoopinfo h3{
@@ -867,7 +868,7 @@ input.invalid {
 }
 
 label{
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
@@ -921,6 +922,12 @@ span{
 }
 
 /*FAQ*/
+.faq {
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
 .faq-container {
     display: flex;
     flex-direction: column;
@@ -931,17 +938,16 @@ span{
     cursor: pointer;
     padding: 30px 20px;
     transition: 0.4s;
-    background-color:white;
+    background-color: white;
     border-radius: 20px;
-    margin-top: 10px;
 }
 
 .faq-body {
-    overflow: hidden;
-    margin-top: -35px;
-    border-radius: 20px;
-    padding: 40px 20px;
+    padding: 0 18px;
     background-color: white;
+    display: none;
+    overflow: hidden;
+    width: 100%;
 }
 
 .faq-body h3{
@@ -1085,4 +1091,8 @@ footer button {
     background-color: #f86600;
     padding: 10px;
     border-radius: 25px;
+}
+
+footer button:hover{
+    background-color: #ff8631;
 }
