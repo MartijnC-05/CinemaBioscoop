@@ -1095,4 +1095,5 @@ footer button {
 
 footer button:hover{
     background-color: #ff8631;
+    transition-duration: .3s;
 }
