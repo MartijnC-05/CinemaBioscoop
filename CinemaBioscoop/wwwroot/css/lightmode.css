@@ -140,19 +140,38 @@ H1 {
 /*footer*/
 footer {
     width: 100%;
-    padding: 25px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
     background-color: #FEDA38;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
-footer h2 {
-    font-size: 18px;
-    color: black;
+    footer h2 {
+        font-size: 18px;
+        color: black;
+    }
+
+.footerkolom {
+    background-color: transparent;
+    width: 20%;
+    float: left
+}
+
+#logo {
+    width: 10%;
+}
+
+.footerboven {
+    padding: 25px 15vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.footeronder h2 {
+    text-align: center;
 }
 
 /*image slidebar*/
