@@ -538,7 +538,7 @@ p{
     margin-bottom: 10px;
     width: auto;
     border-radius: 10px;
-    color: black;
+    color: white;
     float:left;
     padding-left: 5px;
     padding-right:5px;
@@ -569,7 +569,7 @@ table, th, td {
 
 th, td {
     text-align: left;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
 }
 
 th {
@@ -577,7 +577,7 @@ th {
     vertical-align: top;
     padding: 5px;
     padding-top: 15px;
-    color: white;
+    color: black;
     font-size: 18px
 }
 
@@ -585,7 +585,7 @@ td {
     width: 500px;
     padding-top: 15px;
     padding-bottom: 5px;
-    color: white;
+    color: black;
     font-size: 15px;
 }
 
@@ -629,7 +629,7 @@ iframe {
 }
 
 .bestellinksonder #active {
-    color: white;
+    color: black;
 }
 
 .bestelposter{
@@ -804,7 +804,7 @@ footer a{
 }
 
 .voorwaarden label, .voorwaarden a{
-    color: white;
+    color: black;
     font-size: 18.72px;
 }
 
