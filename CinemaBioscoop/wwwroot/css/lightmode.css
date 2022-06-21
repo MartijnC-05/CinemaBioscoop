@@ -178,8 +178,14 @@ footer {
 }
 
 .footerboven h2 {
-    text-decoration: underline red 3px;
+    text-decoration: underline #f86600 3px;
     padding-bottom: 5px;
+}
+
+.footerboven a:hover {
+    border: 3px solid #f86600;
+    border-color: transparent transparent transparent #f86600;
+    padding-left: 3px;
 }
 
 /*image slidebar*/
