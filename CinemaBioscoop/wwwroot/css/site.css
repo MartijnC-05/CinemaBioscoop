@@ -143,6 +143,8 @@ footer {
     background-color: #FEDA38;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 footer h2 {

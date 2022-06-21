@@ -144,6 +144,8 @@ footer {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
     footer h2 {
