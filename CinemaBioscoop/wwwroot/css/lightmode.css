@@ -143,6 +143,7 @@ footer {
     background-color: #FEDA38;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    margin-top: 10px;
 }
 
     footer h2 {
@@ -172,6 +173,11 @@ footer {
 
 .footeronder h2 {
     text-align: center;
+}
+
+.footerboven h2 {
+    text-decoration: underline red 3px;
+    padding-bottom: 5px;
 }
 
 /*image slidebar*/
