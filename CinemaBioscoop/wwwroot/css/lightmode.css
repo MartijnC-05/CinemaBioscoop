@@ -143,7 +143,6 @@ footer {
     background-color: #FEDA38;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -182,10 +181,14 @@ footer {
     padding-bottom: 5px;
 }
 
-.footerboven a:hover {
+#footerlinkjes a:hover {
     border: 3px solid #f86600;
     border-color: transparent transparent transparent #f86600;
     padding-left: 3px;
+}
+
+#follow a:hover {
+    color: #f86600;
 }
 
 /*image slidebar*/
@@ -981,6 +984,7 @@ span{
     display: none;
     overflow: hidden;
     width: 100%;
+    border-radius: 20px;
 }
 
 .faq-body h3{
@@ -1038,7 +1042,7 @@ span{
 }
 
 .privacy ul, li{
-    color: white;
+    color: black;
 }
 
 .privacy ul ul{
