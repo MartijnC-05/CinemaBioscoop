@@ -43,6 +43,12 @@ namespace CinemaBioscoop.Controllers
             return View();
         }
 
+        [Route("Aboutus")]
+        public IActionResult Aboutus()
+        {
+            return View();
+        }
+
         [Route("404")]
         public IActionResult PageNotFound()
         {
