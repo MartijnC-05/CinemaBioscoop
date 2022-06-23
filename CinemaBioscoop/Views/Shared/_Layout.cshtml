@@ -95,23 +95,7 @@
         </div>
     </footer>
 
-        @*<H2 class="tekst">© Sint- Maartens College</H2>
-        <a class="tekst" href="/Cookies">Cookies</a>
-        <a class="tekst" href="/privacy">Privacy</a>
-        <a class="tekst" href="/Contact">Contact</a>
-        <a class="tekst" href="/FAQ">F.A.Q.</a>
-        <button class="btn-toggle">dark/light mode</button>
-        <H2> 
-            <a href="http://www.instagram.com">
-                <i class="fa-brands fa-instagram"></i> 
-            </a>
-            <a href="http://www.facebook.com">
-                <i class="fa-brands fa-facebook"></i> 
-            </a>
-            <a href="http://www.twitter.com">
-                <i class="fa-brands fa-twitter"></i> 
-            </a>
-        </H2>*@
+
     
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -126,14 +110,21 @@
         // Swap out the URL for the different stylesheets
               if (theme.getAttribute("href") == "/css/lightmode.css") {
                   theme.href = "/css/site.css";
-                  //localStorage.setItem('mode', 'dark');
+                  localStorage.setItem('darkMode', 'enabled');
                   console.log('darkmode')
               } else {
                   theme.href = "/css/lightmode.css";
-                  //localStorage.setItem('mode', 'light');
+                  localStorage.setItem('darkMode', 'disabled');
                   console.log('lightmode')
               }
        });
+
+if (localStorage.getItem('darkMode') == 'enabled') {
+    theme.href = "/css/site.css";
+}
+else if (localStorage.getItem('darkMode') == 'disabled') {
+    theme.href = "/css/lightmode.css";
+}
     </script>
 
 
